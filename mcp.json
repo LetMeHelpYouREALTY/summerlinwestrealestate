@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "Linear": {
+      "command": "npx",
+      "args": ["-y", "mcp-remote", "https://mcp.linear.app/sse"]
+    },
+    "Figma": {
+      "url": "http://127.0.0.1:3845/sse"
+    },
+    "BrowserTools": {
+      "command": "npx",
+      "args": ["-y", "@agentdesk/browsertools"]
+    }
+  }
+}

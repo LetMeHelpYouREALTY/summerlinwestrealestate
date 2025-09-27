@@ -1,0 +1,6 @@
+.imageContainer {
+  width: var(--image-width, 62%);
+}
+.textContainer {
+  width: var(--text-width, 38%);
+}

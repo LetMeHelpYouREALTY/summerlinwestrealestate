@@ -1,0 +1,220 @@
+{
+  "featured-homes": {
+    "featured-home-1.jpg": {
+      "title": "Luxury Home Exterior - The Vistas, Summerlin West",
+      "caption": "Stunning front exterior of luxury home in The Vistas with Red Rock Canyon mountain views and desert landscaping",
+      "geoLocation": "The Vistas, Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["luxury home", "The Vistas", "Summerlin West", "Red Rock Canyon", "exterior"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$950K - $2.5M"
+    },
+    "featured-home-2.jpg": {
+      "title": "Elegant Entryway - Summerlin West Luxury Homes",
+      "caption": "Grand entryway with modern design, luxury finishes, and architectural details in Summerlin West",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["entryway", "luxury homes", "modern design", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$850K - $2M"
+    },
+    "featured-home-3.jpg": {
+      "title": "Open Concept Living Room - Summerlin West Real Estate",
+      "caption": "Spacious living room with mountain views, premium amenities, and natural light in Summerlin West",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["living room", "open concept", "mountain views", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$800K - $1.8M"
+    },
+    "featured-home-4.jpg": {
+      "title": "Gourmet Kitchen - Summerlin West Luxury Homes",
+      "caption": "Chef's kitchen with high-end appliances, custom cabinetry, and quartz countertops in Summerlin West",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["kitchen", "gourmet", "appliances", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$900K - $2.2M"
+    },
+    "featured-home-5.jpg": {
+      "title": "Formal Dining Area - Summerlin West Real Estate",
+      "caption": "Elegant dining space perfect for entertaining with modern chandelier and mountain views",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["dining room", "formal dining", "entertaining", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$850K - $2M"
+    },
+    "featured-home-6.jpg": {
+      "title": "Primary Bedroom Suite - Summerlin West Homes",
+      "caption": "Luxurious primary bedroom with ensuite bathroom, mountain views, and custom finishes",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["primary bedroom", "master suite", "mountain views", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$950K - $2.5M"
+    },
+    "featured-home-7.jpg": {
+      "title": "Spa-like Primary Bathroom - Summerlin West",
+      "caption": "Resort-style primary bathroom with dual vanities, soaking tub, and luxury fixtures",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["primary bathroom", "spa bathroom", "luxury fixtures", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$950K - $2.5M"
+    },
+    "featured-home-8.jpg": {
+      "title": "Guest Bedroom - Summerlin West Real Estate",
+      "caption": "Comfortable guest bedroom with modern furnishings, natural light, and mountain views",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["guest bedroom", "modern furnishings", "mountain views", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$800K - $2M"
+    },
+    "featured-home-9.jpg": {
+      "title": "Guest Bathroom - Summerlin West Homes",
+      "caption": "Well-appointed guest bathroom with modern fixtures, tile work, and luxury amenities",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["guest bathroom", "modern fixtures", "tile work", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$800K - $2M"
+    },
+    "featured-home-10.jpg": {
+      "title": "Bonus Room - Summerlin West Luxury Homes",
+      "caption": "Versatile bonus room perfect for home office, entertainment space, or additional living area",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["bonus room", "home office", "entertainment", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$900K - $2.2M"
+    },
+    "featured-home-11.jpg": {
+      "title": "Outdoor Living Space - Summerlin West",
+      "caption": "Beautiful backyard patio with outdoor kitchen, entertainment area, and mountain views",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["outdoor living", "patio", "outdoor kitchen", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$950K - $2.5M"
+    },
+    "featured-home-12.jpg": {
+      "title": "Resort-style Pool - Summerlin West Real Estate",
+      "caption": "Private pool and spa with Red Rock Canyon mountain backdrop and luxury landscaping",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["pool", "spa", "Red Rock Canyon", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$1M - $3M"
+    },
+    "featured-home-13.jpg": {
+      "title": "Outdoor Kitchen - Summerlin West Homes",
+      "caption": "Professional outdoor kitchen with built-in grill, dining area, and entertainment space",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["outdoor kitchen", "built-in grill", "entertainment", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$950K - $2.5M"
+    },
+    "featured-home-14.jpg": {
+      "title": "Fire Pit Entertainment Area - Summerlin West",
+      "caption": "Cozy fire pit area perfect for evening gatherings, relaxation, and outdoor entertaining",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["fire pit", "entertainment", "outdoor living", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$900K - $2.2M"
+    },
+    "featured-home-15.jpg": {
+      "title": "3-Car Garage - Summerlin West Luxury Homes",
+      "caption": "Spacious 3-car garage with storage space, workshop area, and modern garage door",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["garage", "3-car garage", "storage", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$950K - $2.5M"
+    },
+    "featured-home-16.jpg": {
+      "title": "Laundry Room - Summerlin West Real Estate",
+      "caption": "Convenient laundry room with modern appliances, storage, and utility sink",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["laundry room", "appliances", "storage", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$800K - $2M"
+    },
+    "featured-home-17.jpg": {
+      "title": "Community Park - Summerlin West",
+      "caption": "Beautiful community park with walking trails, recreational facilities, and mountain views",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["community park", "walking trails", "recreation", "Summerlin West"],
+      "propertyType": "Community Amenity",
+      "priceRange": "N/A"
+    },
+    "featured-home-18.jpg": {
+      "title": "Neighborhood Views - Summerlin West Homes",
+      "caption": "Scenic neighborhood views showcasing the beauty of Summerlin West and Red Rock Canyon",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["neighborhood", "views", "Red Rock Canyon", "Summerlin West"],
+      "propertyType": "Neighborhood",
+      "priceRange": "N/A"
+    },
+    "featured-home-19.jpg": {
+      "title": "Aerial View - Summerlin West Real Estate",
+      "caption": "Breathtaking aerial view of Summerlin West with Red Rock Canyon and mountain backdrop",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["aerial view", "Red Rock Canyon", "mountain views", "Summerlin West"],
+      "propertyType": "Aerial",
+      "priceRange": "N/A"
+    },
+    "featured-home-20.jpg": {
+      "title": "Twilight Exterior - Summerlin West Luxury Homes",
+      "caption": "Stunning twilight exterior view with architectural lighting and mountain silhouette",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["twilight", "exterior", "architectural lighting", "Summerlin West"],
+      "propertyType": "Single Family Home",
+      "priceRange": "$950K - $2.5M"
+    }
+  },
+  "icons": {
+    "og-image.svg": {
+      "title": "Summerlin West Real Estate Logo - Dr. Jan Duffy, REALTOR®",
+      "caption": "Official logo of Summerlin West Real Estate featuring Dr. Jan Duffy, REALTOR® and luxury real estate branding",
+      "geoLocation": "Las Vegas, NV, USA",
+      "keywords": ["logo", "Summerlin West Real Estate", "Dr. Jan Duffy", "REALTOR"],
+      "propertyType": "Branding",
+      "priceRange": "N/A"
+    }
+  },
+  "agent-photos": {
+    "dr-jan-duffy-headshot.jpg": {
+      "title": "Dr. Jan Duffy, REALTOR® - Summerlin West Real Estate Expert",
+      "caption": "Professional headshot of Dr. Jan Duffy, licensed REALTOR® and Summerlin West real estate specialist",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["Dr. Jan Duffy", "REALTOR", "Summerlin West", "real estate expert"],
+      "propertyType": "Agent",
+      "priceRange": "N/A"
+    }
+  },
+  "community-photos": {
+    "red-rock-canyon-view.jpg": {
+      "title": "Red Rock Canyon Views from Summerlin West",
+      "caption": "Spectacular views of Red Rock Canyon National Conservation Area from Summerlin West homes",
+      "geoLocation": "Red Rock Canyon, Las Vegas, NV, USA",
+      "keywords": ["Red Rock Canyon", "mountain views", "Summerlin West", "national park"],
+      "propertyType": "Landscape",
+      "priceRange": "N/A"
+    },
+    "downtown-summerlin.jpg": {
+      "title": "Downtown Summerlin Shopping and Entertainment",
+      "caption": "Vibrant Downtown Summerlin shopping center with restaurants, entertainment, and retail options",
+      "geoLocation": "Downtown Summerlin, Las Vegas, NV, USA",
+      "keywords": ["Downtown Summerlin", "shopping", "entertainment", "restaurants"],
+      "propertyType": "Amenity",
+      "priceRange": "N/A"
+    }
+  },
+  "blog-images": {
+    "market-report-2024.jpg": {
+      "title": "Summerlin West Market Report 2024",
+      "caption": "Comprehensive market analysis and trends for Summerlin West real estate in 2024",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["market report", "2024", "Summerlin West", "real estate trends"],
+      "propertyType": "Market Data",
+      "priceRange": "N/A"
+    },
+    "home-buying-tips.jpg": {
+      "title": "Home Buying Tips for Summerlin West",
+      "caption": "Expert advice and tips for buying homes in Summerlin West from Dr. Jan Duffy",
+      "geoLocation": "Summerlin West, Las Vegas, NV, USA",
+      "keywords": ["home buying", "tips", "Summerlin West", "real estate advice"],
+      "propertyType": "Educational",
+      "priceRange": "N/A"
+    }
+  }
+}

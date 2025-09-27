@@ -1,0 +1,55 @@
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  background: #F7F9FC;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-family: 'Inter', Arial, sans-serif;
+}
+.headline {
+  color: #0A2540;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+.opening {
+  font-size: 1.15rem;
+  color: #3A8DDE;
+  margin-bottom: 2rem;
+}
+.section {
+  margin-bottom: 2rem;
+}
+.ctaSection {
+  background: #fff;
+  border: 2px solid #16B286;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.ctaHeadline {
+  color: #16B286;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+.ctaButton {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.9rem 2rem;
+  background: #3A8DDE;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: background 0.2s;
+}
+.ctaButton:hover,
+.ctaButton:focus {
+  background: #0A2540;
+  color: #fff;
+} 

@@ -1,0 +1,50 @@
+{
+  "name": "summerlinwestrealestate",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "type-check": "tsc --noEmit",
+    "biome:check": "biome check .",
+    "biome:format": "biome format --write .",
+    "biome:lint": "biome lint .",
+    "biome:fix": "biome check --write .",
+    "prepare": "husky"
+  },
+  "dependencies": {
+    "@ai-sdk/vercel": "^1.0.20",
+    "@linear/sdk": "^60.0.0",
+    "@tailwindcss/postcss": "^4.1.13",
+    "ai": "^5.0.54",
+    "autoprefixer": "^10.4.21",
+    "clsx": "^2.1.1",
+    "critters": "^0.0.25",
+    "framer-motion": "^12.23.22",
+    "keen-slider": "^6.8.6",
+    "next": "15.5.4",
+    "postcss": "^8.5.6",
+    "react": "19.1.1",
+    "react-dom": "19.1.1",
+    "react-hook-form": "^7.63.0",
+    "react-icons": "^5.5.0",
+    "react-modal": "^3.16.3",
+    "rss-parser": "^3.13.0",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss": "^4.1.13",
+    "web-vitals": "^3.5.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.4",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.13",
+    "@types/react-dom": "19.1.9",
+    "eslint": "9.36.0",
+    "eslint-config-next": "15.5.4",
+    "husky": "^9.1.7",
+    "tsx": "^4.20.6",
+    "typescript": "5.9.2"
+  }
+}

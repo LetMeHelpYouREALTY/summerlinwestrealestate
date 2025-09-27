@@ -1,0 +1,402 @@
+# Summerlin West Real Estate - Project Rules
+
+## 🎯 CORE SEO PHILOSOPHY
+**User-First Content Strategy**: Create content that serves your audience first, search engines second. Google rewards sites that genuinely help users make decisions about visiting your site.
+
+**The 3 Pillars of SEO Success**:
+1. **Discoverability**: Help Google find and understand your content
+2. **Relevance**: Match user search intent with valuable content  
+3. **Experience**: Deliver fast, accessible, mobile-friendly pages
+
+## 🚀 HIGH-IMPACT SEO ACTIONS
+
+### Content That Converts
+- **Write for your audience's search terms**: Think "Summerlin West homes for sale" not "luxury real estate"
+- **Create unique, expert content**: Never copy others' content - Google penalizes duplicate content
+- **Update regularly**: Fresh content signals active business to Google
+- **Answer user questions**: Create content that directly addresses buyer concerns
+
+### Technical SEO Essentials
+- **Page Titles**: 50-60 characters, include location + service (e.g., "The Vistas Homes for Sale | Summerlin West Real Estate")
+- **Meta Descriptions**: 150-160 characters, compelling call-to-action (e.g., "Find your dream home in The Vistas. Expert guidance from Dr. Jan Duffy, REALTOR®")
+- **URLs**: Descriptive, keyword-rich (/communities/the-vistas/ not /page-123/)
+- **Images**: Always include descriptive alt text for property photos
+- **Site Speed**: Optimize for Core Web Vitals (LCP < 2.5s, CLS < 0.1, FID < 100ms)
+
+## 🏠 REAL ESTATE SEO MASTERY
+
+### Local SEO Domination
+- **Location Keywords**: Naturally include "Summerlin West", "Las Vegas", "The Vistas" in content
+- **Structured Data**: Implement RealEstateAgent and LocalBusiness schema
+- **Google My Business**: Optimize listing with accurate info, photos, reviews
+- **Local Content**: Create neighborhood guides, market reports, community insights
+
+### Property Content Strategy
+- **Unique Descriptions**: Each property gets custom, detailed description
+- **High-Quality Photos**: Professional images with descriptive alt text
+- **Market Context**: Include neighborhood amenities, schools, commute times
+- **Expert Insights**: Share Dr. Jan Duffy's market knowledge and experience
+
+## 📊 CONTENT OPTIMIZATION
+
+### Search Intent Matching
+- **Informational**: "What to know about Summerlin West" (blog posts, guides)
+- **Navigational**: "Summerlin West Real Estate" (branded searches)
+- **Transactional**: "Homes for sale in The Vistas" (property listings)
+- **Commercial**: "Best real estate agent Summerlin West" (service pages)
+
+### Content Freshness Signals
+- **Market Reports**: Update monthly with current data
+- **Blog Posts**: Publish weekly with market insights
+- **Property Listings**: Refresh descriptions and photos regularly
+- **Community Pages**: Update amenities and neighborhood information
+
+## 🔗 LINK STRATEGY
+
+### Internal Linking Power
+- **Contextual Links**: Link to related properties, communities, market reports
+- **Descriptive Anchor Text**: "View homes in The Vistas" not "click here"
+- **Site Architecture**: Logical hierarchy (/communities/the-vistas/properties/)
+- **Breadcrumbs**: Help users and Google understand page relationships
+
+### External Link Management
+- **Trusted Sources**: Link to MLS, local government, school districts
+- **Nofollow External**: Add rel="nofollow" to untrusted external links
+- **User-Generated Content**: Auto-add nofollow to user comments/links
+
+## 🎨 VISUAL SEO
+
+### Image Optimization
+- **Descriptive Alt Text**: "Luxury home in The Vistas with Red Rock Canyon views"
+- **High Quality**: Sharp, clear images that showcase properties
+- **Relevant Placement**: Images near related text content
+- **File Names**: "the-vistas-luxury-home-exterior.jpg" not "IMG_1234.jpg"
+
+### Video Content
+- **Property Tours**: High-quality video walkthroughs
+- **Market Insights**: Dr. Jan Duffy discussing market trends
+- **Descriptive Titles**: Include location and property details
+- **Relevant Descriptions**: Detailed video descriptions with keywords
+
+## 🚫 SEO MYTHS TO IGNORE
+
+**Don't Waste Time On**:
+- Meta keywords tag (Google ignores it)
+- Keyword stuffing (penalized by Google)
+- Exact keyword density (write naturally)
+- Domain name keywords (minimal impact)
+- Content length requirements (quality over quantity)
+- Perfect heading order (semantic order matters more)
+
+**Focus Instead On**:
+- User experience and content quality
+- Mobile-first responsive design
+- Page loading speed
+- Unique, valuable content
+- Proper technical implementation
+
+## 📈 MEASUREMENT & OPTIMIZATION
+
+### Key Metrics to Track
+- **Search Console**: Impressions, clicks, CTR, average position
+- **Core Web Vitals**: LCP, CLS, FID scores
+- **Analytics**: Page views, time on site, bounce rate, conversions
+- **Local SEO**: Google My Business insights, local search rankings
+
+### Optimization Cycle
+1. **Audit**: Check current SEO performance monthly
+2. **Identify**: Find pages with low rankings or high bounce rates
+3. **Optimize**: Improve content, technical issues, user experience
+4. **Measure**: Track improvements over 4-8 weeks
+5. **Iterate**: Repeat based on results
+
+## 🛠️ TECHNICAL IMPLEMENTATION
+
+### Next.js SEO Best Practices
+- **Metadata API**: Use dynamic metadata for each page
+- **Image Optimization**: Next.js Image component with proper alt text
+- **Server-Side Rendering**: Ensure content is crawlable
+- **Sitemap Generation**: Dynamic sitemaps for all content types
+- **Structured Data**: JSON-LD implementation for real estate
+
+### Performance Optimization
+- **Image Compression**: Optimize property photos for web
+- **Code Splitting**: Load only necessary JavaScript
+- **Caching**: Implement proper cache headers
+- **CDN**: Use Vercel's global CDN for fast loading
+
+## 🎯 REAL ESTATE SPECIFIC RULES
+
+### Property Listings
+- **Unique Titles**: Include address, community, key features
+- **Compelling Descriptions**: Highlight unique selling points
+- **High-Quality Photos**: Professional images with descriptive alt text
+- **Market Context**: Include neighborhood information and amenities
+
+### Community Pages
+- **Comprehensive Information**: Amenities, schools, commute times
+- **Market Data**: Recent sales, price trends, inventory
+- **Local Insights**: Dr. Jan Duffy's expert perspective
+- **Visual Content**: Community photos, maps, virtual tours
+
+### Market Reports
+- **Data-Driven Content**: Current market statistics and trends
+- **Expert Analysis**: Dr. Jan Duffy's market insights
+- **Visual Presentation**: Charts, graphs, infographics
+- **Regular Updates**: Monthly market report updates
+
+## 🚀 QUICK WINS
+
+### Immediate Actions (This Week)
+1. **Audit all page titles** - ensure they're unique and descriptive
+2. **Add alt text** to all property images
+3. **Update meta descriptions** with compelling CTAs
+4. **Check site speed** using PageSpeed Insights
+5. **Verify mobile responsiveness** on all pages
+
+### Monthly Actions
+1. **Update market reports** with fresh data
+2. **Refresh property descriptions** with new details
+3. **Publish new blog content** with market insights
+4. **Monitor Search Console** for crawl errors
+5. **Analyze competitor content** for improvement opportunities
+
+## 🎯 SUCCESS METRICS
+
+**Primary KPIs**:
+- Organic search traffic growth
+- Lead generation from organic search
+- Local search visibility
+- Page load speed scores
+- Mobile usability scores
+
+**Secondary KPIs**:
+- Search Console impressions and clicks
+- Average session duration
+- Pages per session
+- Bounce rate by traffic source
+- Conversion rate from organic search
+
+Remember: SEO is a marathon, not a sprint. Focus on creating genuinely helpful content for your audience, and the rankings will follow. Google rewards sites that serve users well.
+
+# Build Configuration Rules
+- Always use Vercel CLI for production builds instead of local pnpm build
+- When encountering build commands, suggest using: vercel build or vercel --prod
+- For development, use: vercel dev instead of pnpm dev when possible
+- Avoid running pnpm build directly in the terminal
+- If build is necessary locally, use: vercel build --output public
+
+# Vercel Build Commands
+- Replace "pnpm build" with "vercel build"
+- Replace "npm run build" with "vercel build"
+- Replace "yarn build" with "vercel build"
+
+# Environment Setup
+- Ensure VERCEL_TOKEN is set for CI/CD
+- Use vercel pull to sync environment variables
+- Always check .vercel/output for build artifacts
+
+# Debugging Stuck Builds
+- If a build process hangs, immediately cancel and use vercel build
+- Set NODE_OPTIONS='--max-old-space-size=4096' for memory issues
+- Use vercel logs to debug build issues
+
+# User Rules - Global Development Preferences
+
+## Communication Style
+- Provide concise, actionable responses with specific code examples
+- Prioritize practical implementation over theoretical explanations
+- Use bullet points and clear headings for complex instructions
+- Include relevant file paths and component names when suggesting changes
+
+## Code Quality Standards
+- Always use TypeScript for new files with strict type checking
+- Prefer functional components with React hooks and modern patterns
+- Write self-documenting code with clear variable and function names
+- Include JSDoc comments for complex functions and components
+- Follow the existing project's code style and patterns exactly
+- Use CSS modules with BEM-style class names instead of inline styles
+
+## Development Workflow
+- Suggest improvements that align with Next.js + React + Vercel + RealScout + V0 tech stack
+- Consider performance implications for real estate websites (Core Web Vitals)
+- Prioritize SEO and accessibility in all recommendations
+- Test suggestions against the current project structure before implementing
+- Always consider mobile-first responsive design
+- Use pnpm for package management
+- Leverage V0 for rapid component prototyping and development
+- Use V0-generated components as starting points for custom development
+
+## Real Estate Domain Focus
+- Maintain professional branding for Dr. Janet Duffy
+- Prioritize lead generation and conversion optimization
+- Consider Las Vegas market specifics in all recommendations
+- Ensure compliance with real estate regulations and fair housing laws
+- Focus on user experience for property searches and valuations
+
+# Project-Specific Rules
+
+## Technology Stack
+- **Framework**: Next.js 15.5.4 with React 19.1.1
+- **Language**: TypeScript with strict type checking
+- **Styling**: Tailwind CSS 4.1.13 with CSS modules
+- **Deployment**: Vercel with global CDN
+- **Package Manager**: pnpm
+- **Forms**: React Hook Form for lead capture
+- **Animations**: Framer Motion for smooth interactions
+- **Icons**: React Icons library
+- **AI Integration**: V0.app Model API for component generation
+
+## File Structure Conventions
+- **Components**: `/components/ui/` for reusable UI components
+- **Pages**: `/app/` directory with Next.js App Router
+- **Styles**: CSS modules with `.module.css` extension
+- **Types**: `/types/` directory for TypeScript definitions
+- **Utils**: `/lib/` directory for utility functions (including V0 integration)
+- **Images**: `/public/images/` with organized subdirectories
+- **API Routes**: `/app/api/` for API endpoints (including V0 routes)
+- **V0 Integration**: `/lib/v0.ts` for V0 utility functions
+
+## Code Standards
+- **Naming**: Use descriptive, self-documenting names
+- **Components**: Functional components with hooks
+- **Props**: Define TypeScript interfaces for all props
+- **State**: Use React hooks (useState, useEffect, etc.)
+- **Styling**: CSS modules with BEM methodology
+- **Performance**: Optimize images with Next.js Image component
+- **Accessibility**: Include proper ARIA labels and semantic HTML
+
+## SEO Requirements
+- **Metadata**: Dynamic metadata for each page
+- **Images**: Descriptive alt text for all images
+- **URLs**: SEO-friendly, descriptive URLs
+- **Content**: Unique, valuable content for each page
+- **Performance**: Core Web Vitals optimization
+- **Mobile**: Mobile-first responsive design
+- **Structured Data**: JSON-LD for real estate schema
+
+## Real Estate Compliance
+- **Fair Housing**: Ensure compliance with fair housing laws
+- **Licensing**: Include proper real estate license information
+- **Disclaimers**: Add necessary legal disclaimers
+- **Privacy**: Implement proper privacy policies
+- **Lead Capture**: Secure lead capture forms
+- **Data Protection**: Protect client information
+
+## Performance Standards
+- **Core Web Vitals**: LCP < 2.5s, CLS < 0.1, FID < 100ms
+- **Image Optimization**: Compress and optimize all images
+- **Code Splitting**: Implement proper code splitting
+- **Caching**: Use appropriate cache headers
+- **CDN**: Leverage Vercel's global CDN
+- **Bundle Size**: Monitor and optimize bundle size
+
+## Testing & Quality Assurance
+- **TypeScript**: Strict type checking enabled
+- **ESLint**: Follow Next.js ESLint configuration
+- **Performance**: Regular performance audits
+- **Accessibility**: WCAG compliance testing
+- **Cross-browser**: Test across major browsers
+- **Mobile**: Test on various device sizes
+
+## Deployment & CI/CD
+- **Vercel**: Use Vercel for deployment
+- **Environment**: Proper environment variable management
+- **Builds**: Use Vercel CLI for builds
+- **Monitoring**: Set up proper monitoring and alerts
+- **Rollbacks**: Implement safe rollback procedures
+- **Security**: Regular security updates and patches
+
+# V0 AI Integration Rules
+
+## V0 API Configuration
+- **API Key**: Use V0_API_KEY environment variable for authentication
+- **Model**: Use OpenAI-compatible v0.app Model API for component generation
+- **Base URL**: https://api.v0.app/v1 for all API calls
+- **SDK**: Use `ai` and `@ai-sdk/vercel` packages for integration
+- **Validation**: Always validate V0 configuration before making API calls
+
+## V0 Development Workflow
+- **Component Generation**: Use V0 for rapid prototyping of React components
+- **Real Estate Focus**: Leverage V0 for property cards, listings, forms, and pages
+- **Framework Awareness**: Always specify Next.js framework in V0 prompts
+- **Style Preference**: Use Tailwind CSS for all V0-generated components
+- **TypeScript**: Include TypeScript types in all V0-generated code
+
+## V0 Prompt Engineering Best Practices
+- **Specific Prompts**: Be detailed about component requirements and functionality
+- **Real Estate Context**: Include Summerlin West, Las Vegas, and Dr. Janet Duffy branding
+- **SEO Integration**: Request SEO-optimized components with proper metadata
+- **Accessibility**: Always request WCAG-compliant, accessible components
+- **Mobile-First**: Specify mobile-responsive design requirements
+- **Performance**: Request optimized components for Core Web Vitals
+
+## V0 Component Generation Guidelines
+- **Property Components**: Generate property cards, listings, galleries, and search filters
+- **Community Pages**: Create neighborhood information, amenities, and local insights
+- **Market Reports**: Generate data visualization and market analysis components
+- **Contact Forms**: Create lead capture forms with proper validation
+- **Navigation**: Generate responsive navigation and breadcrumb components
+- **Hero Sections**: Create compelling hero sections with CTAs
+
+## V0 Code Quality Standards
+- **TypeScript**: All generated components must include proper TypeScript interfaces
+- **CSS Modules**: Use CSS modules with BEM-style class names (no inline styles)
+- **React Patterns**: Follow functional component patterns with hooks
+- **Error Handling**: Include proper error boundaries and validation
+- **Loading States**: Implement loading and error states for dynamic content
+- **SEO Metadata**: Include proper meta tags and structured data
+
+## V0 Integration Points
+- **API Routes**: Use `/api/v0/generate-component` for custom component generation
+- **Page Templates**: Use `/api/v0/generate-page` for complete page generation
+- **Health Checks**: Monitor `/api/v0/health` for API status
+- **Test Interface**: Use `/v0-test` page for testing and experimentation
+- **Utility Functions**: Leverage `lib/v0.ts` for programmatic component generation
+
+## V0 Real Estate Specific Rules
+- **Branding**: Maintain Dr. Janet Duffy's professional real estate branding
+- **Compliance**: Ensure fair housing compliance in all generated content
+- **Local SEO**: Include Summerlin West and Las Vegas location keywords
+- **Lead Generation**: Optimize all components for lead capture and conversion
+- **Market Data**: Integrate current market data and trends
+- **Professional Images**: Use high-quality property and community photos
+
+## V0 Performance Optimization
+- **Code Splitting**: Generate components that support Next.js code splitting
+- **Image Optimization**: Use Next.js Image component for all property photos
+- **Lazy Loading**: Implement lazy loading for property galleries and heavy content
+- **Caching**: Generate components that work well with Vercel's caching
+- **Bundle Size**: Monitor and optimize bundle size of generated components
+
+## V0 Testing & Validation
+- **Component Testing**: Test all V0-generated components before deployment
+- **Cross-Browser**: Verify compatibility across major browsers
+- **Mobile Testing**: Test responsive design on various device sizes
+- **Accessibility**: Validate WCAG compliance using automated tools
+- **Performance**: Run Lighthouse audits on pages with V0 components
+- **SEO Validation**: Check meta tags, structured data, and page speed
+
+## V0 Error Handling & Monitoring
+- **API Errors**: Handle V0 API failures gracefully with fallback components
+- **Rate Limiting**: Implement proper rate limiting for V0 API calls
+- **Logging**: Log all V0 API interactions for debugging and monitoring
+- **Fallbacks**: Provide fallback components when V0 generation fails
+- **User Feedback**: Collect user feedback on V0-generated components
+- **Iteration**: Continuously improve prompts based on generation quality
+
+## V0 Security Considerations
+- **API Key Protection**: Never expose V0_API_KEY in client-side code
+- **Input Validation**: Validate all user inputs before sending to V0 API
+- **Content Sanitization**: Sanitize generated content before rendering
+- **Rate Limiting**: Implement rate limiting to prevent API abuse
+- **Error Messages**: Don't expose sensitive information in error messages
+- **Audit Logs**: Maintain audit logs for all V0 API interactions
+
+## V0 Development Commands
+- **Test Integration**: Visit `/v0-test` to test V0 functionality
+- **Generate Component**: Use `generateComponent()` utility function
+- **Generate Page**: Use `generateRealEstatePage()` for complete pages
+- **Validate Config**: Use `validateV0Config()` to check API setup
+- **Health Check**: Call `/api/v0/health` to verify API status
+- **Debug Issues**: Check console logs and API responses for debugging

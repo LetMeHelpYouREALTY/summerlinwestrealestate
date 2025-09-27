@@ -1,0 +1,625 @@
+/* Maps Page Styles */
+.container {
+  --h1-size: 44px;
+  --h2-size: 26px;
+  --h3-size: 26px;
+  --line-height: 1.618;
+  --section-margin: 42px;
+  --p-margin: 13px;
+  --heading-margin: 21px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f7f9fc 0%, #ffffff 100%);
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #0a2540 0%, #3a8dde 100%);
+  color: white;
+  padding: 80px 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+  opacity: 0.3;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.heroTitle {
+  font-family: "Playfair Display", serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  opacity: 0.9;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+/* Tab Navigation */
+.tabNavigation {
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.tabContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 0;
+}
+
+.tab {
+  flex: 1;
+  padding: 20px;
+  background: none;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+}
+
+.tab:hover {
+  color: #3a8dde;
+  background: #f8fafc;
+}
+
+.activeTab {
+  color: #3a8dde;
+  border-bottom-color: #3a8dde;
+  background: #f0f7ff;
+}
+
+/* Map Section */
+.mapSection {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 0;
+  min-height: 600px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.mapContainer {
+  position: relative;
+  background: #f8fafc;
+  border-right: 1px solid #e5e7eb;
+}
+
+.mapLoading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #6b7280;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #e5e7eb;
+  border-top: 3px solid #3a8dde;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.mapContent {
+  height: 100%;
+}
+
+.mapPlaceholder {
+  height: 100%;
+  background:
+    linear-gradient(45deg, #f8fafc 25%, transparent 25%),
+    linear-gradient(-45deg, #f8fafc 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #f8fafc 75%),
+    linear-gradient(-45deg, transparent 75%, #f8fafc 75%);
+  background-size: 20px 20px;
+  background-position:
+    0 0,
+    0 10px,
+    10px -10px,
+    -10px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapOverlay {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+}
+
+.mapOverlay h3 {
+  color: #0a2540;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.mapOverlay p {
+  color: #6b7280;
+  margin-bottom: 20px;
+}
+
+.mapOverlay ul {
+  text-align: left;
+  color: #6b7280;
+  line-height: 1.6;
+}
+
+.mapOverlay li {
+  margin-bottom: 8px;
+}
+
+/* Map Controls */
+.mapControls {
+  padding: 30px;
+  background: white;
+  overflow-y: auto;
+}
+
+.controlGroup {
+  margin-bottom: 30px;
+}
+
+.controlGroup h4 {
+  color: #0a2540;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.filterOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.filterOption {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.filterOption input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #3a8dde;
+}
+
+.priceRange {
+  margin-top: 15px;
+}
+
+.priceSlider {
+  width: 100%;
+  height: 6px;
+  border-radius: 3px;
+  background: #e5e7eb;
+  outline: none;
+  -webkit-appearance: none;
+}
+
+.priceSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #3a8dde;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(58, 141, 222, 0.3);
+}
+
+.priceSlider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #3a8dde;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 6px rgba(58, 141, 222, 0.3);
+}
+
+.priceLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.propertySelect {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: white;
+  color: #374151;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.propertySelect:focus {
+  outline: none;
+  border-color: #3a8dde;
+  box-shadow: 0 0 0 3px rgba(58, 141, 222, 0.1);
+}
+
+/* Quick Search Section */
+.quickSearch {
+  padding: 60px 20px;
+  background: white;
+}
+
+.searchContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.searchContainer h2 {
+  color: #0a2540;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  font-family: "Playfair Display", serif;
+}
+
+.searchForm {
+  background: #f8fafc;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.searchRow {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.searchInput {
+  flex: 1;
+  padding: 15px 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #3a8dde;
+  box-shadow: 0 0 0 3px rgba(58, 141, 222, 0.1);
+}
+
+.searchButton {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #3a8dde 0%, #2b6cb0 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.searchButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(58, 141, 222, 0.3);
+}
+
+.searchOptions {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.searchLink {
+  color: #3a8dde;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.searchLink:hover {
+  color: #2b6cb0;
+  text-decoration: underline;
+}
+
+/* Featured Areas */
+.featuredAreas {
+  padding: 80px 20px;
+  background: #f7f9fc;
+}
+
+.featuredAreas h2 {
+  text-align: center;
+  color: #0a2540;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  font-family: "Playfair Display", serif;
+}
+
+.areasGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.areaCard {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.areaCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.areaCard h3 {
+  color: #0a2540;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.areaCard p {
+  color: #6b7280;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.areaLink {
+  display: inline-block;
+  padding: 12px 24px;
+  background: linear-gradient(135deg, #3a8dde 0%, #2b6cb0 100%);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.areaLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(58, 141, 222, 0.3);
+}
+
+/* Market Insights */
+.marketInsights {
+  padding: 80px 20px;
+  background: white;
+}
+
+.marketInsights h2 {
+  text-align: center;
+  color: #0a2540;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  font-family: "Playfair Display", serif;
+}
+
+.insightsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.insightCard {
+  background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+}
+
+.insightCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.insightCard h4 {
+  color: #6b7280;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.insightValue {
+  color: #0a2540;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.insightChange {
+  color: #16b286;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+/* CTA Section */
+.ctaSection {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #0a2540 0%, #3a8dde 100%);
+  color: white;
+  text-align: center;
+}
+
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.ctaContent h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: "Playfair Display", serif;
+}
+
+.ctaContent p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.9;
+}
+
+.ctaButtons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  display: inline-block;
+  padding: 15px 30px;
+  background: white;
+  color: #0a2540;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.ctaButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+.ctaButtonSecondary {
+  display: inline-block;
+  padding: 15px 30px;
+  background: transparent;
+  color: white;
+  text-decoration: none;
+  border: 2px solid white;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.ctaButtonSecondary:hover {
+  background: white;
+  color: #0a2540;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .heroTitle {
+    font-size: 2.5rem;
+  }
+
+  .tabContainer {
+    flex-direction: column;
+  }
+
+  .mapSection {
+    grid-template-columns: 1fr;
+  }
+
+  .mapControls {
+    order: -1;
+  }
+
+  .searchRow {
+    flex-direction: column;
+  }
+
+  .areasGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .insightsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaButtons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .searchForm {
+    padding: 30px 20px;
+  }
+
+  .areaCard,
+  .insightCard {
+    padding: 30px 20px;
+  }
+}

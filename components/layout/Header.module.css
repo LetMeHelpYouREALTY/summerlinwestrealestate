@@ -1,0 +1,76 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+  background: var(--surface-primary);
+  border-bottom: 1px solid var(--border-primary);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.navDesktop {
+  --nav-padding: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navItem {
+  position: relative;
+}
+
+.navLink {
+  padding-left: var(--nav-padding, 12px);
+  padding-right: var(--nav-padding, 12px);
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  display: block;
+}
+
+.navLink:hover {
+  color: var(--color-primary, var(--brand-500));
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--surface-primary);
+  border: 1px solid var(--border-primary);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  min-width: 200px;
+  z-index: 1000;
+  padding: 0.5rem 0;
+}
+
+.submenuItem {
+  display: block;
+}
+
+.submenuLink {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 400;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.submenuLink:hover {
+  background-color: var(--surface-secondary);
+  color: var(--color-primary, var(--brand-500));
+} 

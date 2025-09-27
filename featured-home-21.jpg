@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    { "source": "/sitemap.xml", "destination": "/app/sitemap.xml" },
+    { "source": "/robots.txt", "destination": "/robots.txt" }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}

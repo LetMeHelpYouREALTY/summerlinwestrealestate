@@ -1,0 +1,13 @@
+.overlayBg {
+  background: rgba(10, 37, 64, 0.7);
+}
+.menuRadius {
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+}
+.touchManipulation {
+  touch-action: manipulation;
+}
+.iconLarge {
+  font-size: 24px;
+}

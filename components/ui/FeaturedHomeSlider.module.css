@@ -1,0 +1,122 @@
+/* Container for the slider */
+.sliderContainer {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+/* Each slide */
+.slide {
+  position: relative;
+  text-align: center;
+}
+
+/* Main image in slider */
+.slideImage {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+/* Caption overlay on slider */
+.slideCaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(10, 37, 64, 0.7);
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-size: var(--h3-size, 1.1rem);
+  margin-bottom: var(--p-margin, 12px);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+}
+
+/* View All Photos button */
+.viewAllBtn {
+  margin: 1.5rem auto 0 auto;
+  display: block;
+  padding: 0.75rem 2rem;
+  background: #3a8dde;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Modal content */
+.modalContent {
+  max-width: 1000px;
+  margin: 2rem auto;
+  border-radius: 16px;
+  padding: 2rem;
+  background: #fff;
+  box-shadow: 0 4px 32px rgba(10, 37, 64, 0.18);
+}
+
+/* Modal overlay */
+.modalOverlay {
+  background: rgba(10, 37, 64, 0.45);
+  z-index: 1000;
+}
+
+/* Modal title */
+.modalTitle {
+  font-size: var(--h2-size, 2rem);
+  margin-bottom: var(--heading-margin, 24px);
+  color: #0a2540;
+}
+
+/* Modal grid */
+.modalGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Modal grid item */
+.modalGridItem {
+  text-align: center;
+}
+
+/* Modal grid image */
+.modalGridImage {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 12px;
+}
+
+/* Modal grid caption */
+.modalGridCaption {
+  margin-top: 0.5rem;
+  color: #0a2540;
+  font-weight: 500;
+}
+
+/* Close button in modal */
+.closeBtn {
+  margin: 2rem auto 0 auto;
+  display: block;
+  padding: 0.75rem 2rem;
+  background: #16b286;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.matFrame {
+  background: #fff;
+  border: 8px solid #fff;
+  box-shadow:
+    0 4px 24px rgba(10, 37, 64, 0.12),
+    0 0 0 2px #e5e7eb;
+  padding: 8px;
+  border-radius: 20px;
+  /* visually distinct, works for both slider and modal */
+}

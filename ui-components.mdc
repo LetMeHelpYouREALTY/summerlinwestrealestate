@@ -1,0 +1,83 @@
+---
+description: Implementing designs and building UI for Summerlin West Real Estate
+---
+
+## 🏠 **Real Estate UI Component Rules**
+
+### **Component Reuse Strategy**
+- **ALWAYS** reuse existing UI components from `/components/ui/` - these are your primitives
+- **ONLY** create new components when existing ones cannot solve the problem
+- **ORCHESTRATE** ui components to build complex real estate features
+
+### **Available UI Components** (`/components/ui/`)
+#### **Core Components**
+- **Button.tsx**: Primary, secondary, outline variants with motion animations
+- **Input.tsx**: Form input component with validation support
+- **Logo.tsx**: Brand logo component for consistent branding
+
+#### **Real Estate Specific Components**
+- **LeadCaptureForm.tsx**: Complete lead capture with validation, GDPR compliance, and analytics
+- **LeadCaptureFormClient.tsx**: Client-side version with enhanced interactivity
+- **PropertyImage.tsx**: Optimized property image display with Next.js Image
+- **FeaturedHomeSlider.tsx**: Property showcase slider with motion animations
+- **RealScoutWidget.tsx**: Integrated RealScout property search widget
+- **RealScoutAdvancedSearch.tsx**: Advanced property search with filters
+- **RealScoutListings.tsx**: Property listings display component
+- **PropertySearchWidget.tsx**: Custom property search interface
+
+#### **Community & Market Components**
+- **SummerlinWestOverview.tsx**: Community overview and information
+- **NeighborhoodHero.tsx**: Hero section for community pages
+- **LatestMarketInsights.tsx**: Market data and insights display
+- **StatCard.tsx**: Statistics and metrics display cards
+- **VistasLeadForm.tsx**: Specialized form for The Vistas community
+- **VistasListingForm.tsx**: Property listing form for The Vistas
+
+#### **Content & Layout Components**
+- **AboutImage.tsx**: Optimized about section images
+- **AgentAvatar.tsx**: Agent profile and avatar display
+- **BlogLayout.tsx**: Blog post layout and structure
+- **SectionCard.tsx**: Content section wrapper component
+- **SEOHead.tsx**: SEO metadata and structured data component
+- **TestimonialsSection.tsx**: Customer testimonials display
+
+#### **Integration Components**
+- **HomebotWidget.tsx**: Homebot integration for property valuations
+
+### **Design System Compliance**
+- **Branding**: Maintain Dr. Janet Duffy's professional real estate branding
+- **Colors**: Use established color palette (blues, grays, whites)
+- **Typography**: Follow established font hierarchy and sizing
+- **Spacing**: Use consistent spacing scale throughout
+- **Mobile-First**: Always implement mobile-responsive design
+
+### **SEO & Performance**
+- **Image Optimization**: Use Next.js Image component with proper alt text
+- **Loading States**: Implement loading states for all dynamic content
+- **Error Boundaries**: Include error handling for property data
+- **Accessibility**: Ensure WCAG compliance for all components
+
+### **Real Estate Compliance**
+- **Fair Housing**: Ensure all components comply with fair housing laws
+- **Lead Capture**: Secure and compliant lead capture forms
+- **Data Protection**: Protect client information in all components
+- **Licensing**: Include proper real estate license information
+
+### **When Components Are Missing**
+- **ASK** the human how they want to proceed
+- **DOCUMENT** new component requirements
+- **CREATE** reusable components that can be used across the site
+- **UPDATE** this rule file when new patterns emerge
+
+### **Component Creation Guidelines**
+- **TypeScript**: Always use TypeScript with proper interfaces
+- **CSS Modules**: Use CSS modules with BEM-style class names
+- **Props**: Define clear, typed props for all components
+- **Documentation**: Include JSDoc comments for complex components
+- **Testing**: Ensure components work across different screen sizes
+
+### **Real Estate Content Integration**
+- **Property Data**: Integrate with existing property data structures
+- **Market Information**: Use established market data formats
+- **Community Data**: Leverage existing community information
+- **Contact Information**: Use consistent contact information across components

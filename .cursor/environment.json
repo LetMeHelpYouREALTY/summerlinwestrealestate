@@ -1,0 +1,19 @@
+{
+  "snapshot": "POPULATED_FROM_SETTINGS",
+  "install": "pnpm install && pnpm run type-check",
+  "start": "echo 'Starting Summerlin West Real Estate development environment...'",
+  "terminals": [
+    {
+      "name": "Next.js Dev Server",
+      "command": "pnpm run dev"
+    },
+    {
+      "name": "TypeScript Watcher",
+      "command": "pnpm run type-check --watch"
+    },
+    {
+      "name": "Biome Linter",
+      "command": "pnpm run biome:check --watch"
+    }
+  ]
+}

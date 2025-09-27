@@ -1,0 +1,445 @@
+.page {
+  background: #f7f9fc;
+  color: #0a2540;
+  font-family: "Lora", serif;
+  min-height: 100vh;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(135deg, #3a8dde 80%, #bfa76a 100%);
+  color: #fff;
+  padding: 3.5rem 2rem 2.5rem 2rem;
+  border-radius: 0 0 32px 32px;
+  box-shadow: 0 8px 32px rgba(10, 37, 64, 0.1);
+  position: relative;
+  margin-bottom: 2.5rem;
+}
+.heroContent {
+  flex: 1 1 400px;
+  z-index: 2;
+  max-width: 600px;
+}
+.heroTitle {
+  font-family: "Playfair Display", serif;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
+.heroSubtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+.heroStats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+}
+.heroStat {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 1.1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(191, 167, 106, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.heroStat span {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #bfa76a;
+  margin-bottom: 0.2rem;
+}
+.heroMapAnchor {
+  flex: 1 1 320px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 320px;
+  z-index: 1;
+}
+.heroMapImg {
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(10, 37, 64, 0.18);
+  border: 3px solid #bfa76a;
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+}
+
+.sectionCard {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(10, 37, 64, 0.1);
+  margin: 2.5rem auto;
+  padding: 2.5rem 2rem;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.centerTitle {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  color: #0a2540;
+  font-weight: 800;
+  margin-bottom: 2rem;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-shadow: 0 2px 8px rgba(191, 167, 106, 0.08);
+  position: relative;
+}
+.centerTitle:after {
+  content: "";
+  display: block;
+  margin: 1.2rem auto 0 auto;
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #bfa76a 60%, #3a8dde 100%);
+}
+.communitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+}
+.communityCard {
+  background: linear-gradient(135deg, #fff 80%, #f7f9fc 100%);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(10, 37, 64, 0.1);
+  border: 2px solid #bfa76a;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s,
+    border-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  min-height: 260px;
+}
+.cardImageWrap {
+  position: relative;
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: #eaeaea;
+}
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s cubic-bezier(0.4, 1.7, 0.7, 1.01);
+  display: block;
+}
+.cardOverlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(58, 141, 222, 0.7) 60%,
+    rgba(191, 167, 106, 0.7) 100%
+  );
+  color: #fff;
+  font-size: 1.3rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+  letter-spacing: 0.5px;
+}
+.communityCard:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 16px 48px rgba(191, 167, 106, 0.22);
+  border-color: #3a8dde;
+}
+.communityCard:hover .cardImage {
+  transform: scale(1.08);
+}
+.communityCard:hover .cardOverlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+.communityContent {
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.communityTitle {
+  color: #0a2540;
+  font-size: 1.4rem;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+.communityMeta {
+  margin-bottom: 0.7rem;
+}
+.featureTag {
+  display: inline-block;
+  background: linear-gradient(90deg, #f7f9fc 60%, #bfa76a 100%);
+  color: #3a8dde;
+  border-radius: 10px;
+  padding: 0.3rem 1rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  box-shadow: 0 2px 8px rgba(191, 167, 106, 0.08);
+  border: 1px solid #e5e7eb;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.communityCard:hover .featureTag {
+  background: linear-gradient(90deg, #3a8dde 60%, #bfa76a 100%);
+  color: #fff;
+}
+.communityDescription {
+  color: #666;
+  font-size: 1.05rem;
+  line-height: 1.5;
+  margin: 0 0 1rem 0;
+  font-family: "Lora", serif;
+}
+.communityPrice {
+  color: #16b286;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 1rem 0;
+}
+.amenitiesList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 1.1rem;
+  color: #0a2540;
+}
+.amenitiesList li {
+  margin-bottom: 1.2rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+.amenitiesList li:before {
+  content: "\2713 ";
+  color: #bfa76a;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+.ctaSection {
+  padding: 4rem 2rem 3rem 2rem;
+  background: linear-gradient(135deg, #0a2540 0%, #3a8dde 100%);
+  color: #fff;
+  text-align: center;
+  border-radius: 32px 32px 0 0;
+  margin-top: 3rem;
+}
+.ctaContent {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.ctaContent h2 {
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1.2rem;
+  font-family: "Playfair Display", serif;
+}
+.ctaContent p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.95;
+}
+.ctaButton {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: #bfa76a;
+  color: #0a2540;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0 1rem 1rem 0;
+  transition:
+    background 0.2s,
+    color 0.2s;
+  box-shadow: 0 2px 8px rgba(191, 167, 106, 0.08);
+}
+.ctaButton:hover {
+  background: #fff;
+  color: #3a8dde;
+}
+.ctaButtonSecondary {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #bfa76a;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0 1rem 1rem 0;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.ctaButtonSecondary:hover {
+  background: #bfa76a;
+  color: #0a2540;
+}
+.ctaSocials {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.ctaSocials img {
+  width: 36px;
+  height: 36px;
+  filter: drop-shadow(0 2px 8px rgba(10, 37, 64, 0.08));
+  transition: filter 0.2s;
+}
+.ctaSocials a:hover img {
+  filter: drop-shadow(0 4px 16px #bfa76a);
+}
+.serviceAreaContainer {
+  --h1-size: 67px;
+  --h2-size: 42px;
+  --h3-size: 26px;
+  --line-height: 1.618;
+  --section-margin: 34px;
+  --p-margin: 13px;
+  --heading-margin: 21px;
+}
+@media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    padding: 2.5rem 1rem 1.5rem 1rem;
+  }
+  .heroContent {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+  .heroMapAnchor {
+    min-width: 220px;
+  }
+  .heroMapImg {
+    max-width: 320px;
+  }
+  .centerTitle {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .sectionCard {
+    padding: 1.2rem 0.5rem;
+    border-radius: 10px;
+    margin: 1.2rem 0;
+  }
+  .centerTitle {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+  .communitiesGrid {
+    gap: 1.2rem;
+  }
+  .communityContent {
+    padding: 1rem 0.7rem 0.7rem 0.7rem;
+  }
+  .ctaSection {
+    padding: 2rem 0.5rem 1.5rem 0.5rem;
+    border-radius: 16px 16px 0 0;
+  }
+  .ctaContent h2 {
+    font-size: 1.2rem;
+  }
+  .ctaButton,
+  .ctaButtonSecondary {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+  }
+  .ctaSocials {
+    gap: 1rem;
+  }
+}
+
+/* Breadcrumb Navigation */
+.breadcrumb {
+  background: #f7f9fc;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.breadcrumbList {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.breadcrumbItem {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.breadcrumbItem:not(:last-child)::after {
+  content: '›';
+  margin: 0 0.5rem;
+  color: #bfa76a;
+  font-weight: bold;
+}
+
+.breadcrumbLink {
+  color: #3a8dde;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.breadcrumbLink:hover {
+  color: #bfa76a;
+  text-decoration: underline;
+}
+
+.breadcrumbItem[aria-current="page"] {
+  color: #0a2540;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    padding: 0.8rem 1rem;
+  }
+  
+  .breadcrumbItem {
+    font-size: 0.8rem;
+  }
+}

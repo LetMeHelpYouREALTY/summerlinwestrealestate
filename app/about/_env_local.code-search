@@ -1,0 +1,10 @@
+# Query: .env.local
+# ContextLines: 1
+
+1 result - 1 file
+   PERPLEXITY_API_KEY=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
+app\google-places\page.tsx:
+  241                  
+  Store your Google Maps API credentials securely using environment variables. 
+  242:                 Create a <code>.env.local</code> file in your project root:
+  243                </p>
