@@ -23,7 +23,7 @@ export default function Communities() {
         "Golf Course",
       ],
       homeTypes: "Single Family, Custom Estates",
-      image: "https://placehold.co/400x220/1a365d/ffffff?text=The+Vistas",
+      image: "/images/communities/the-vistas.png",
       slug: "the-vistas",
       highlighted: true,
       yearBuilt: "2018-Present",
@@ -33,18 +33,18 @@ export default function Communities() {
     {
       name: "The Paseos",
       description:
-        "Family-friendly neighborhood with top-rated schools and abundant community amenities.",
+        "Single-family homes and townhomes with community pools, parks, and trail connections.",
       priceRange: "$750K - $1.5M",
       minPrice: 750000,
       maxPrice: 1500000,
       features: [
-        "Top Schools",
-        "Family-Friendly",
-        "Parks Nearby",
         "Community Pool",
+        "Parks Nearby",
+        "Walking Trails",
+        "Townhomes & Houses",
       ],
       homeTypes: "Single Family, Townhomes",
-      image: "https://placehold.co/400x220/2d4a22/ffffff?text=The+Paseos",
+      image: "/images/communities/the-paseos.png",
       slug: "the-paseos",
       highlighted: true,
       yearBuilt: "2019-Present",
@@ -65,7 +65,7 @@ export default function Communities() {
         "Fitness Center",
       ],
       homeTypes: "Single Family, Patio Homes",
-      image: "https://placehold.co/400x220/8b4513/ffffff?text=Stonebridge",
+      image: "/images/communities/stonebridge.png",
       slug: "stonebridge",
       highlighted: true,
       yearBuilt: "2020-Present",
@@ -86,7 +86,7 @@ export default function Communities() {
         "Smart Homes",
       ],
       homeTypes: "Single Family, Modern Design",
-      image: "https://placehold.co/400x220/4a5568/ffffff?text=Redpoint",
+      image: "/images/communities/redpoint.png",
       slug: "redpoint",
       highlighted: false,
       yearBuilt: "2021-Present",
@@ -107,7 +107,7 @@ export default function Communities() {
         "Transit Friendly",
       ],
       homeTypes: "Condos, Townhomes, Lofts",
-      image: "https://placehold.co/400x220/2b6cb0/ffffff?text=Redpoint+Square",
+      image: "/images/communities/redpoint-square.png",
       slug: "redpoint-square",
       highlighted: false,
       yearBuilt: "2020-Present",
@@ -123,7 +123,7 @@ export default function Communities() {
       maxPrice: 3000000,
       features: ["Luxury Estates", "Privacy", "Elegant Design", "City Views"],
       homeTypes: "Custom Estates, Luxury Homes",
-      image: "https://placehold.co/400x220/553c9a/ffffff?text=Reverence",
+      image: "/images/communities/reverence.png",
       slug: "reverence",
       highlighted: true,
       yearBuilt: "2017-Present",
@@ -213,17 +213,17 @@ export default function Communities() {
           <h2 className={styles.centerTitle}>Why Live in Summerlin West?</h2>
           <div className={styles.featuresGrid}>
             <div className={styles.featureCard}>
-              <div className={styles.featureIcon} aria-hidden="true">🎓</div>
-              <h3 className={styles.featureTitle}>Top-Rated Schools</h3>
+              <div className={styles.featureIcon} aria-hidden="true">🛍️</div>
+              <h3 className={styles.featureTitle}>Downtown Summerlin Nearby</h3>
               <p className={styles.featureDescription}>
-                Exceptional public and private schools with high academic performance and excellent extracurricular programs.
+                Shopping, dining, and entertainment at Downtown Summerlin, minutes from Summerlin West villages.
               </p>
             </div>
             <div className={styles.featureCard}>
               <div className={styles.featureIcon} aria-hidden="true">🏞️</div>
               <h3 className={styles.featureTitle}>Parks & Recreation</h3>
               <p className={styles.featureDescription}>
-                Access to Red Rock Canyon, walking trails, parks, and outdoor recreation for all ages and interests.
+                Access to Red Rock Canyon, walking trails, parks, and outdoor recreation.
               </p>
             </div>
             <div className={styles.featureCard}>

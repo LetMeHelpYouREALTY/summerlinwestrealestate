@@ -70,8 +70,8 @@ export default function CurrentListing() {
                   addressCountry: "US",
                 },
                 image: [
-                  "https://placehold.co/400x300?text=Photo+1",
-                  "https://placehold.co/400x300?text=Photo+2",
+                  "/images/properties/vistas-luxury-home.png",
+                  "/images/properties/stonebridge-home.png",
                 ],
                 numberOfRooms: 8,
                 floorSize: {
@@ -102,7 +102,7 @@ export default function CurrentListing() {
             {photoGallery.map((num) => (
               <Image
                 key={num}
-                src={`https://placehold.co/400x300?text=Photo+${num}`}
+                src={`/images/properties/paseos-home.png`}
                 alt={`Home photo ${num}`}
                 width={400}
                 height={300}

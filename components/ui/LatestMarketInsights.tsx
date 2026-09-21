@@ -101,7 +101,7 @@ const LatestMarketInsights = React.memo(function LatestMarketInsights() {
       if (aiImages[item.title]) {
         return aiImages[item.title];
       }
-      return "https://placehold.co/120x80?text=News";
+      return "/images/og-image.png";
     };
   }, [aiImages]);
 

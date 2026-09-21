@@ -7,10 +7,10 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import Header from "../components/layout/Header";
 import SummerlinWestOverview from '../components/ui/SummerlinWestOverview';
-import { useState, useEffect } from "react";
 import FeaturedHomeSlider, {
   FeaturedHomeImage,
 } from '../components/ui/FeaturedHomeSlider';
+import { deliveryUrl, siteImages } from "../lib/site-images";
 
 // Dynamically import RealScoutAdvancedSearch for performance
 const RealScoutAdvancedSearch = dynamic(
@@ -47,27 +47,13 @@ type Faq = {
 };
 
 function HomeHeroImage() {
-  const [src, setSrc] = useState("/images/og-image.svg");
-  useEffect(() => {
-    const prompt =
-      "A luxury residential neighborhood in Summerlin West, Las Vegas, with modern homes and Red Rock Canyon views, blue sky, and desert landscaping.";
-    fetch("/api/generate-image", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ prompt }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.base64) setSrc(`data:image/png;base64,${data.base64}`);
-      })
-      .catch(() => setSrc("/images/og-image.svg"));
-  }, []);
+  const hero = siteImages.heroH1;
   return (
     <Image
-      src={src}
-      alt="Luxury homes in Summerlin West, Las Vegas with Red Rock Canyon mountain views and desert landscaping - Dr. Jan Duffy Real Estate"
-      width={600}
-      height={300}
+      src={deliveryUrl(hero)}
+      alt={hero.alt}
+      width={1200}
+      height={630}
       className={styles.heroImage}
       priority
     />
@@ -89,9 +75,9 @@ export default function Home() {
 
   const faqs: Faq[] = [
     {
-      question: "What are the best neighborhoods in Summerlin West?",
+      question: "Which Summerlin West communities can I tour?",
       answer:
-        "Popular Summerlin West neighborhoods include The Vistas, Redpoint, Stonebridge, The Cliffs, and Reverence. Each offers unique amenities and lifestyle options.",
+        "Communities include The Vistas, Redpoint, Stonebridge, The Cliffs, and Reverence. Each has a distinct mix of floor plans, amenities, and price points.",
     },
     {
       question: "What is the average home price in Summerlin West?",
@@ -111,7 +97,7 @@ export default function Home() {
     {
       question: "What makes Summerlin West special?",
       answer:
-        "Summerlin West offers master-planned communities, top-rated schools, proximity to Red Rock Canyon, and a family-friendly lifestyle with excellent amenities.",
+        "Summerlin West offers master-planned communities, trail access to Red Rock Canyon, and resort-style amenities across multiple villages.",
     },
     {
       question: "How can I get a free Summerlin West market report?",

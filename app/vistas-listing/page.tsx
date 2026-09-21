@@ -76,7 +76,7 @@ export default function VistasListing() {
             {listings.map((listing) => (
               <div key={listing.id} className={styles.listingCard}>
                 <Image
-                  src={`https://placehold.co/400x220?text=Vistas+Listing+${listing.id}`}
+                  src={`/images/communities/the-vistas.png`}
                   alt={`Vistas Summerlin home listing ${listing.id}`}
                   width={400}
                   height={220}

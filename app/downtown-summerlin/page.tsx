@@ -67,8 +67,8 @@ export default function DowntownSummerlin() {
           <h2>Shopping in Downtown Summerlin</h2>
           <div className={styles.contentGrid}>
             <Image
-              src="https://placehold.co/320x200?text=Shopping"
-              alt="Shopping in Downtown Summerlin"
+              src="/images/downtown/shopping.png"
+              alt="Shopping in Downtown Summerlin open-air promenade"
               width={320}
               height={200}
               className={styles.contentImage}
@@ -95,7 +95,7 @@ export default function DowntownSummerlin() {
               menus in a lively, walkable environment.
             </p>
             <Image
-              src="https://placehold.co/320x200?text=Dining"
+              src="/images/communities/downtown-summerlin.png"
               alt="Dining in Downtown Summerlin"
               width={320}
               height={200}
@@ -107,7 +107,7 @@ export default function DowntownSummerlin() {
           <h2>Entertainment & Lifestyle</h2>
           <div className={styles.contentGrid}>
             <Image
-              src="https://placehold.co/320x200?text=Entertainment"
+              src="/images/communities/downtown-summerlin.png"
               alt="Entertainment in Downtown Summerlin"
               width={320}
               height={200}
@@ -142,7 +142,7 @@ export default function DowntownSummerlin() {
               </ul>
             </div>
             <Image
-              src="https://placehold.co/320x200?text=Real+Estate"
+              src="/images/communities/the-vistas.png"
               alt="Downtown Summerlin real estate market"
               width={320}
               height={200}

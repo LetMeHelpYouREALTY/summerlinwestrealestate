@@ -29,8 +29,8 @@ const listings = [
       country: "US",
     },
     images: [
-      "https://placehold.co/400x300?text=Photo+1",
-      "https://placehold.co/400x300?text=Photo+2",
+      "/images/properties/vistas-luxury-home.png",
+      "/images/properties/stonebridge-home.png",
     ],
     price: "899000",
   },

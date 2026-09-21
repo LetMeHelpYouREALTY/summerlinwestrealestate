@@ -102,7 +102,7 @@ export default function Sold() {
             {[1, 2, 3, 4, 5, 6].map((i) => (
               <article key={i} className={styles.featuredListingCard}>
                 <Image
-                  src={`https://placehold.co/400x220?text=Sold+Home+${i}`}
+                  src={`/images/properties/stonebridge-home.png`}
                   alt={`Recently sold home in Summerlin ${i}`}
                   width={400}
                   height={220}

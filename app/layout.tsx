@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     siteName: "Summerlin West Real Estate",
     images: [
       {
-        url: "/images/og-image.svg",
+        url: "/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Summerlin West Real Estate Hero",
@@ -84,7 +84,7 @@ export const metadata: Metadata = {
       "Market authority for Summerlin West and The Vistas community. Get listings, market reports, and expert guidance.",
     images: [
       {
-        url: "/images/og-image.svg",
+        url: "/images/og-image.png",
         alt: "Summerlin West Real Estate Hero",
       },
     ],

@@ -13,7 +13,7 @@ export default function SEOHead({
   title,
   description,
   canonical,
-  ogImage = "/images/og-image.svg",
+  ogImage = "/images/og-image.png",
   keywords = [],
   structuredData,
 }: SEOHeadProps) {

@@ -136,7 +136,7 @@ export default function TheVistas() {
         <section className={styles.sectionCard}>
           <h2>About The Vistas</h2>
           <Image
-            src="https://placehold.co/800x300?text=The+Vistas+Park"
+            src="/images/communities/the-vistas.png"
             alt="The Vistas Park in Summerlin"
             width={800}
             height={300}
@@ -155,7 +155,7 @@ export default function TheVistas() {
             {[1, 2, 3].map((i) => (
               <div key={i} className={styles.propertyCard}>
                 <Image
-                  src={`https://placehold.co/400x220?text=Vistas+Home+${i}`}
+                  src={`/images/communities/the-vistas.png`}
                   alt={`Home for sale in The Vistas Summerlin ${i}`}
                   width={400}
                   height={220}

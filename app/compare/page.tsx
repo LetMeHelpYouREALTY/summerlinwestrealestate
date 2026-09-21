@@ -86,7 +86,7 @@ export default function Compare() {
           {[1, 2, 3].map((i) => (
             <article key={i} className={styles.comparisonCard}>
               <Image
-                src={`https://placehold.co/400x220?text=Home+${i}`}
+                src={`/images/properties/vistas-luxury-home.png`}
                 alt={`Compare Summerlin home ${i}`}
                 width={400}
                 height={220}

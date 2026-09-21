@@ -74,7 +74,7 @@ export default function Properties() {
                 beds: 4,
                 baths: 3,
                 sqft: "3,200",
-                image: "https://placehold.co/400x220?text=Luxury+Home+1",
+                image: "/images/properties/vistas-luxury-home.png",
                 status: "Active",
               },
               {
@@ -84,7 +84,7 @@ export default function Properties() {
                 beds: 3,
                 baths: 2.5,
                 sqft: "2,400",
-                image: "https://placehold.co/400x220?text=Townhome+2",
+                image: "/images/properties/redpoint-square.png",
                 status: "Active",
               },
               {
@@ -94,7 +94,7 @@ export default function Properties() {
                 beds: 4,
                 baths: 3,
                 sqft: "2,800",
-                image: "https://placehold.co/400x220?text=Family+Home+3",
+                image: "/images/properties/paseos-home.png",
                 status: "Active",
               },
               {
@@ -104,7 +104,7 @@ export default function Properties() {
                 beds: 5,
                 baths: 4.5,
                 sqft: "4,500",
-                image: "https://placehold.co/400x220?text=Estate+4",
+                image: "/images/properties/reverence-home.png",
                 status: "Active",
               },
               {
@@ -114,7 +114,7 @@ export default function Properties() {
                 beds: 3,
                 baths: 2,
                 sqft: "2,100",
-                image: "https://placehold.co/400x220?text=Cozy+Home+5",
+                image: "/images/properties/stonebridge-home.png",
                 status: "Active",
               },
               {
@@ -124,7 +124,7 @@ export default function Properties() {
                 beds: 4,
                 baths: 3.5,
                 sqft: "3,600",
-                image: "https://placehold.co/400x220?text=Contemporary+6",
+                image: "/images/properties/redpoint-luxury.png",
                 status: "Active",
               },
             ].map((property) => (

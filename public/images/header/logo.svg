@@ -1,0 +1,14 @@
+<svg width="150" height="68" viewBox="0 0 150 68" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="150" height="68" fill="#1e40af" rx="8"/>
+  
+  <!-- House icon -->
+  <path d="M20 45 L20 25 L30 15 L40 25 L40 45 L20 45 Z" fill="white" stroke="#1e40af" stroke-width="2"/>
+  <rect x="25" y="30" width="6" height="8" fill="#1e40af"/>
+  <rect x="32" y="30" width="6" height="8" fill="#1e40af"/>
+  
+  <!-- Text -->
+  <text x="50" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="white">Summerlin West</text>
+  <text x="50" y="40" font-family="Arial, sans-serif" font-size="12" fill="white">Real Estate</text>
+  <text x="50" y="55" font-family="Arial, sans-serif" font-size="10" fill="#93c5fd">Dr. Jan Duffy, REALTOR®</text>
+</svg>

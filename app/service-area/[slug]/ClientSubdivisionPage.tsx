@@ -526,7 +526,7 @@ export default function ClientSubdivisionPage({
 
   // Generate enhanced content
   const heroImage =
-    subdivision.image || "https://placehold.co/600x300?text=The+Vistas";
+    subdivision.image || "/images/communities/the-vistas.png";
   const imageAlt = subdivision.image
     ? `${subdivision.name} neighborhood view showcasing luxury homes and community amenities`
     : `Placeholder image for ${subdivision.name} luxury subdivision`;

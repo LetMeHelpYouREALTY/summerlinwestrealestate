@@ -148,7 +148,7 @@ export default function MarketReports() {
           <div>
             <h3 className={styles.centerTitle}>Price Trends</h3>
             <Image
-              src="https://placehold.co/400x220?text=Price+Trends"
+              src="/images/hero-h1-summerlin-west.png"
               alt="Summerlin home price trends chart"
               width={400}
               height={220}
@@ -159,7 +159,7 @@ export default function MarketReports() {
           <div>
             <h3 className={styles.centerTitle}>Inventory Trends</h3>
             <Image
-              src="https://placehold.co/400x220?text=Inventory+Trends"
+              src="/images/communities/stonebridge.png"
               alt="Summerlin housing inventory trends chart"
               width={400}
               height={220}
