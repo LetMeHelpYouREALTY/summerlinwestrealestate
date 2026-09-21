@@ -56,6 +56,9 @@ const uploads = [
   ['swre-red-rock-cc', 'public/images/communities/red-rock-country-club.png'],
   ['swre-the-ridges', 'public/images/communities/the-ridges.png'],
   ['swre-downtown-summerlin', 'public/images/communities/downtown-summerlin.png'],
+  ['swre-downtown-shopping', 'public/images/downtown/shopping.png'],
+  ['swre-downtown-dining', 'public/images/downtown/dining.png'],
+  ['swre-downtown-entertainment', 'public/images/downtown/entertainment.png'],
 ];
 
 let hash = '';

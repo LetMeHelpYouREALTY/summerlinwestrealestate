@@ -7,9 +7,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import Header from "../components/layout/Header";
 import SummerlinWestOverview from '../components/ui/SummerlinWestOverview';
-import FeaturedHomeSlider, {
-  FeaturedHomeImage,
-} from '../components/ui/FeaturedHomeSlider';
+import FeaturedHomeSlider from '../components/ui/FeaturedHomeSlider';
 import { deliveryUrl, siteImages } from "../lib/site-images";
 
 // Dynamically import RealScoutAdvancedSearch for performance
@@ -175,92 +173,36 @@ export default function Home() {
               Learn About the Hidden Home Equity Tax
             </Link>
           </section>
-          {/* Featured Home Section */}
+          {/* Featured neighborhoods — heading-matched photos, not mock MLS rooms */}
           <section className={styles.section}>
-            <div className={styles.sectionTitle}>
-              Featured Home in Summerlin West
-            </div>
+            <h2 className={styles.sectionTitle}>
+              Featured Neighborhoods in Summerlin West
+            </h2>
             <FeaturedHomeSlider
               images={[
                 {
-                  src: "/images/featured-home/featured-home-1.jpg",
-                  caption: "Front Exterior",
+                  src: deliveryUrl(siteImages.theVistas),
+                  caption: "The Vistas",
                 },
                 {
-                  src: "/images/featured-home/featured-home-2.jpg",
-                  caption: "Entryway",
+                  src: deliveryUrl(siteImages.thePaseos),
+                  caption: "The Paseos",
                 },
                 {
-                  src: "/images/featured-home/featured-home-3.jpg",
-                  caption: "Living Room",
+                  src: deliveryUrl(siteImages.stonebridge),
+                  caption: "Stonebridge",
                 },
                 {
-                  src: "/images/featured-home/featured-home-4.jpg",
-                  caption: "Kitchen",
+                  src: deliveryUrl(siteImages.redpoint),
+                  caption: "Redpoint",
                 },
                 {
-                  src: "/images/featured-home/featured-home-5.jpg",
-                  caption: "Dining Area",
+                  src: deliveryUrl(siteImages.reverence),
+                  caption: "Reverence",
                 },
                 {
-                  src: "/images/featured-home/featured-home-6.jpg",
-                  caption: "Primary Bedroom",
-                },
-                {
-                  src: "/images/featured-home/featured-home-7.jpg",
-                  caption: "Primary Bathroom",
-                },
-                {
-                  src: "/images/featured-home/featured-home-8.jpg",
-                  caption: "Guest Bedroom",
-                },
-                {
-                  src: "/images/featured-home/featured-home-9.jpg",
-                  caption: "Guest Bathroom",
-                },
-                {
-                  src: "/images/featured-home/featured-home-10.jpg",
-                  caption: "Loft/Bonus Room",
-                },
-                {
-                  src: "/images/featured-home/featured-home-11.jpg",
-                  caption: "Backyard Patio",
-                },
-                {
-                  src: "/images/featured-home/featured-home-12.jpg",
-                  caption: "Pool & Spa",
-                },
-                {
-                  src: "/images/featured-home/featured-home-13.jpg",
-                  caption: "Outdoor Kitchen",
-                },
-                {
-                  src: "/images/featured-home/featured-home-14.jpg",
-                  caption: "Fire Pit Area",
-                },
-                {
-                  src: "/images/featured-home/featured-home-15.jpg",
-                  caption: "Garage",
-                },
-                {
-                  src: "/images/featured-home/featured-home-16.jpg",
-                  caption: "Laundry Room",
-                },
-                {
-                  src: "/images/featured-home/featured-home-17.jpg",
-                  caption: "Community Park",
-                },
-                {
-                  src: "/images/featured-home/featured-home-18.jpg",
-                  caption: "Neighborhood View",
-                },
-                {
-                  src: "/images/featured-home/featured-home-19.jpg",
-                  caption: "Aerial View",
-                },
-                {
-                  src: "/images/featured-home/featured-home-20.jpg",
-                  caption: "Twilight Exterior",
+                  src: deliveryUrl(siteImages.downtownSummerlin),
+                  caption: "Downtown Summerlin",
                 },
               ]}
             />

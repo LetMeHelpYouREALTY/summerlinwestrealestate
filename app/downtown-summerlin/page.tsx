@@ -95,8 +95,8 @@ export default function DowntownSummerlin() {
               menus in a lively, walkable environment.
             </p>
             <Image
-              src="/images/communities/downtown-summerlin.png"
-              alt="Dining in Downtown Summerlin"
+              src="/images/downtown/dining.png"
+              alt="Dining patios in Downtown Summerlin"
               width={320}
               height={200}
               className={styles.contentImage}
@@ -107,8 +107,8 @@ export default function DowntownSummerlin() {
           <h2>Entertainment & Lifestyle</h2>
           <div className={styles.contentGrid}>
             <Image
-              src="/images/communities/downtown-summerlin.png"
-              alt="Entertainment in Downtown Summerlin"
+              src="/images/downtown/entertainment.png"
+              alt="Las Vegas Ballpark and Downtown Summerlin entertainment district"
               width={320}
               height={200}
               className={styles.contentImage}
@@ -142,8 +142,8 @@ export default function DowntownSummerlin() {
               </ul>
             </div>
             <Image
-              src="/images/communities/the-vistas.png"
-              alt="Downtown Summerlin real estate market"
+              src="/images/communities/downtown-summerlin.png"
+              alt="Downtown Summerlin real estate and walkable mixed-use buildings"
               width={320}
               height={200}
               className={styles.contentImage}

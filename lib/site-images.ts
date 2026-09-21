@@ -80,6 +80,21 @@ export const siteImages = {
     local: '/images/communities/downtown-summerlin.png',
     alt: 'Downtown Summerlin retail promenade at dusk, Las Vegas',
   },
+  downtownShopping: {
+    id: 'swre-downtown-shopping',
+    local: '/images/downtown/shopping.png',
+    alt: 'Shopping in Downtown Summerlin open-air promenade',
+  },
+  downtownDining: {
+    id: 'swre-downtown-dining',
+    local: '/images/downtown/dining.png',
+    alt: 'Dining patios in Downtown Summerlin',
+  },
+  downtownEntertainment: {
+    id: 'swre-downtown-entertainment',
+    local: '/images/downtown/entertainment.png',
+    alt: 'Las Vegas Ballpark and Downtown Summerlin entertainment district',
+  },
   summerlinWest: {
     id: 'swre-hero-h1',
     local: '/images/hero-h1-summerlin-west.png',
