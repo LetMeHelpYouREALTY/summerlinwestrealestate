@@ -17,7 +17,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json(
       {
         error: "Debug error",
-        message: error instanceof Error ? error.message : "Unknown error",
+        message: error instanceof Error ? error.message : String(error),
       },
       { status: 500 }
     );

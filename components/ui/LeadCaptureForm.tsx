@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "./LeadCaptureForm.module.css";
-import { trackGtagEvent } from "../../lib/analytics";
 
 interface LeadFormData {
   name: string;
@@ -14,7 +13,7 @@ interface LeadFormData {
   privacyConsent: boolean;
 }
 
-interface LeadCaptureFormProps {
+export interface LeadCaptureFormProps {
   variant?: "inline" | "modal";
   title?: string;
   subtitle?: string;
@@ -97,27 +96,29 @@ export default function LeadCaptureForm({
 
       setSubmitStatus("success");
       reset();
-      const userType =
-        typeof window !== "undefined"
-          ? (window as Window & { userType?: string }).userType || "unknown"
-          : "unknown";
-      trackGtagEvent("lead_form_submit", {
-        event_category: "Lead",
-        event_label: source,
-        cd1: userType,
-        cd2: "LeadCaptureForm",
-        cd3: "submit",
-        cd4: 1,
-      });
-      trackGtagEvent("generate_lead", {
-        value: 1,
-        currency: "USD",
-        form_location: source || "unknown",
-        cd1: userType,
-        cd2: "LeadCaptureForm",
-        cd3: "submit",
-        cd4: 1,
-      });
+      if (typeof window !== "undefined" && typeof (window as Window & { gtag?: (...args: unknown[]) => void; userType?: string }).gtag === 'function') {
+        const win = window as unknown as Window & {
+          gtag: (...args: unknown[]) => void;
+          userType?: string;
+        };
+        win.gtag("event", "lead_form_submit", {
+          event_category: "Lead",
+          event_label: source,
+          cd1: win.userType || "unknown",
+          cd2: "LeadCaptureForm",
+          cd3: "submit",
+          cd4: 1,
+        });
+        win.gtag("event", "generate_lead", {
+          value: 1,
+          currency: "USD",
+          form_location: source || "unknown",
+          cd1: win.userType || "unknown",
+          cd2: "LeadCaptureForm",
+          cd3: "submit",
+          cd4: 1,
+        });
+      }
       onSuccess?.();
       if (variant === "modal") {
         setTimeout(() => {
@@ -127,8 +128,9 @@ export default function LeadCaptureForm({
     } catch (error: unknown) {
       setSubmitStatus("error");
       setErrorMessage(
-        (error instanceof Error ? error.message : null) ||
-          "There was a problem submitting your request. Please try again.",
+        error instanceof Error
+          ? error.message
+          : "There was a problem submitting your request. Please try again.",
       );
     } finally {
       setIsSubmitting(false);

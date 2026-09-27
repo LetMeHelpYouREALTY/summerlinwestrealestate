@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { readdir } from "fs/promises";
 import { join } from "path";
 import { readFileSync } from "fs";
+import { SITE_URL, absoluteUrl } from "../../lib/site-url";
 
 interface ImageMetadata {
   title: string;
@@ -19,7 +20,7 @@ interface MetadataFile {
 }
 
 export async function GET() {
-  const baseUrl = "https://summerlinwestrealestate.com";
+  const baseUrl = SITE_URL;
   const today = new Date().toISOString().split("T")[0];
   
   // Define image directories to scan
@@ -74,7 +75,7 @@ export async function GET() {
               title: imageMetadata.title,
               caption: imageMetadata.caption,
               geoLocation: imageMetadata.geoLocation,
-              license: "https://summerlinwestrealestate.com/terms",
+              license: absoluteUrl("/terms"),
               keywords: imageMetadata.keywords,
               propertyType: imageMetadata.propertyType,
               priceRange: imageMetadata.priceRange

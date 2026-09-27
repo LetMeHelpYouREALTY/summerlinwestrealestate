@@ -54,7 +54,7 @@ export async function GET(req: NextRequest) {
     return NextResponse.json(
       {
         error: "Failed to verify Cloudflare token",
-        details: error instanceof Error ? error.message : "Unknown error",
+        details: error instanceof Error ? error.message : String(error),
       },
       { status: 500 }
     );

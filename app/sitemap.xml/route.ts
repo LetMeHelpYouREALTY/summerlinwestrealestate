@@ -1,9 +1,10 @@
 import { NextResponse } from "next/server";
 import { posts } from "../../lib/posts";
+import { SITE_URL } from "../../lib/site-url";
 import subdivisions from "../service-area/subdivisions.json";
 
 export async function GET() {
-  const baseUrl = "https://summerlinwestrealestate.com";
+  const baseUrl = SITE_URL;
   const today = new Date().toISOString().split("T")[0];
 
   // Main pages with proper priorities

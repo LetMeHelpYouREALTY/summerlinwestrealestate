@@ -6,6 +6,7 @@ import styles from "../page.module.css";
 import LatestMarketInsightsClient from "../../components/ui/LatestMarketInsightsClient";
 import TestimonialsSectionClient from "../../components/ui/TestimonialsSectionClient";
 import { FaMapMarkerAlt, FaUserTie } from "react-icons/fa";
+import { absoluteUrl } from "../../lib/site-url";
 
 const structuredData = {
   "@context": "https://schema.org",
@@ -26,7 +27,7 @@ const structuredData = {
     latitude: 36.154,
     longitude: -115.3336,
   },
-  url: "https://www.summerlinwestrealestate.com/about",
+  url: absoluteUrl("/about"),
   telephone: "+1-702-550-0112",
 };
 

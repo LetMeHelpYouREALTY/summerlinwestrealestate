@@ -1,5 +1,6 @@
 import { readFileSync, existsSync } from "fs";
 import { join } from "path";
+import { absoluteUrl } from "./site-url";
 
 export interface ImageMetadata {
   title: string;
@@ -125,7 +126,7 @@ export function generateImageStructuredData(
     contentUrl: imagePath,
     name: metadata.title,
     description: metadata.caption,
-    license: metadata.license || "https://summerlinwestrealestate.com/terms",
+    license: metadata.license || absoluteUrl("/terms"),
     creator: {
       "@type": "Organization",
       name: "Summerlin West Real Estate",
@@ -243,11 +244,7 @@ export function validateImageMetadata(
     "priceRange",
   ];
 
-  const record =
-    typeof metadata === "object" && metadata !== null
-      ? (metadata as Record<string, unknown>)
-      : null;
-
+  const record = metadata as Record<string, unknown> | null | undefined;
   return requiredFields.every(
     (field) => record && typeof record[field] !== "undefined",
   );

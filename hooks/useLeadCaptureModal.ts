@@ -5,7 +5,7 @@ import { useState, useCallback } from 'react';
 interface LeadCaptureModal {
   isOpen: boolean;
   source: string;
-  openModal: (source?: string) => void;
+  openModal: (modalSource?: string) => void;
   closeModal: () => void;
   submitLead: (data: LeadData) => Promise<void>;
 }
@@ -19,11 +19,11 @@ interface LeadData {
 
 export const useLeadCaptureModal = (): LeadCaptureModal => {
   const [isOpen, setIsOpen] = useState(false);
-  const [source, setSource] = useState("");
+  const [source, setSource] = useState("website");
 
-  const openModal = useCallback((nextSource?: string) => {
-    if (nextSource) {
-      setSource(nextSource);
+  const openModal = useCallback((modalSource?: string) => {
+    if (modalSource) {
+      setSource(modalSource);
     }
     setIsOpen(true);
   }, []);

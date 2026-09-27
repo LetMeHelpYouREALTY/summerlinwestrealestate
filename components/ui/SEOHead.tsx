@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { absoluteUrl } from "../../lib/site-url";
 
 interface SEOHeadProps {
   title: string;
@@ -45,7 +46,7 @@ export default function SEOHead({
       {canonical && (
         <link
           rel="canonical"
-          href={`https://summerlinwestrealestate.com${canonical}`}
+          href={absoluteUrl(canonical)}
         />
       )}
 

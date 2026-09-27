@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
+import { SITE_URL } from "../../lib/site-url";
 
 export async function GET() {
-  const baseUrl = "https://summerlinwestrealestate.com";
+  const baseUrl = SITE_URL;
   const today = new Date().toISOString().split("T")[0];
 
   const sitemapIndex = `<?xml version="1.0" encoding="UTF-8"?>

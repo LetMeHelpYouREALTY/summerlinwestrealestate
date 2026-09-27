@@ -4,6 +4,8 @@ import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import BreadcrumbsClient from "../components/layout/BreadcrumbsClient";
+import BreadcrumbJsonLd from "../components/seo/BreadcrumbJsonLd";
+import { SITE_URL, absoluteUrl } from "../lib/site-url";
 import Head from "next/head";
 import RealScoutWidget from "../components/ui/RealScoutWidget";
 import styles from "./page.module.css";
@@ -34,7 +36,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://summerlinwestrealestate.com"),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Summerlin West Real Estate | Dr. Jan Duffy",
     template: "%s | Summerlin West",
@@ -65,7 +67,7 @@ export const metadata: Metadata = {
     title: "Summerlin West Real Estate | Dr. Jan Duffy",
     description:
       "Summerlin West real estate with Dr. Jan Duffy, REALTOR®. Explore villages, search MLS listings, and get local guidance across Las Vegas’s west side.",
-    url: "https://summerlinwestrealestate.com",
+    url: SITE_URL,
     siteName: "Summerlin West Real Estate",
     images: [
       {
@@ -113,12 +115,12 @@ const schemaMarkup = {
   "@graph": [
     {
       "@type": "RealEstateAgent",
-      "@id": "https://summerlinwestrealestate.com/#agent",
+      "@id": `${SITE_URL}/#agent`,
       name: "Dr. Jan Duffy",
       jobTitle: "REALTOR®",
       description:
         "Summerlin West real estate specialist with 15+ years of experience",
-      url: "https://summerlinwestrealestate.com",
+      url: SITE_URL,
       telephone: "+1-702-550-0112",
       email: "jan@summerlinwestrealestate.com",
       address: {
@@ -161,12 +163,12 @@ const schemaMarkup = {
     },
     {
       "@type": "Organization",
-      "@id": "https://summerlinwestrealestate.com/#organization",
+      "@id": `${SITE_URL}/#organization`,
       name: "Summerlin West Real Estate",
-      url: "https://summerlinwestrealestate.com",
+      url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: "https://summerlinwestrealestate.com/images/logo.png",
+        url: absoluteUrl("/images/logo.png"),
       },
       sameAs: [
         "https://www.facebook.com/summerlinwestrealestate",
@@ -175,7 +177,7 @@ const schemaMarkup = {
     },
     {
       "@type": "Place",
-      "@id": "https://summerlinwestrealestate.com/#place",
+      "@id": `${SITE_URL}/#place`,
       name: "Summerlin West",
       description:
         "Luxury master-planned community in Las Vegas with Red Rock Canyon views",
@@ -250,6 +252,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
         />
+        <BreadcrumbJsonLd />
         <Header />
         <main className="pt-16">
           <BreadcrumbsClient />

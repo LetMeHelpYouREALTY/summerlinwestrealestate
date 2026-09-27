@@ -7,14 +7,11 @@ type RealScoutAdvancedSearchProps = {
   showFeatures?: boolean;
 };
 
-const RealScoutAdvancedSearch: React.FC<RealScoutAdvancedSearchProps> = ({
-  title = "Advanced Property Search",
-  subtitle = "Search functionality goes here",
-}) => {
+const RealScoutAdvancedSearch: React.FC<RealScoutAdvancedSearchProps> = () => {
   return (
     <div className="real-scout-search">
-      <h2>{title}</h2>
-      <p>{subtitle}</p>
+      <h2>Advanced Property Search</h2>
+      <p>Search functionality goes here</p>
     </div>
   );
 };

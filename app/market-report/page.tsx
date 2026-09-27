@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Head from "next/head";
 import styles from "./market-report.module.css";
+import { absoluteUrl } from "../../lib/site-url";
 
 export default function MarketReportRedirect() {
   const router = useRouter();
@@ -21,7 +22,7 @@ export default function MarketReportRedirect() {
         <meta name="robots" content="noindex, nofollow" />
         <link
           rel="canonical"
-          href="https://summerlinwestrealestate.com/market-reports"
+          href={absoluteUrl("/market-reports")}
         />
       </Head>
       <div className={styles.redirectContainer}>

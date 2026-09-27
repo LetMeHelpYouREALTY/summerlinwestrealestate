@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../page.module.css";
 import LatestMarketInsightsClient from "../../components/ui/LatestMarketInsightsClient";
+import { absoluteUrl } from "../../lib/site-url";
 
 export default function Compare() {
   return (
@@ -33,7 +34,7 @@ export default function Compare() {
                 name: "Compare Summerlin Homes",
                 description:
                   "Compare homes for sale in Summerlin West. Analyze features, prices, and neighborhoods to find your perfect Summerlin home with expert guidance.",
-                url: "https://www.summerlinwestrealestate.com/compare",
+                url: absoluteUrl("/compare"),
               },
               null,
               2,

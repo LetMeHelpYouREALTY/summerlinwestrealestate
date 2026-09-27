@@ -6,6 +6,7 @@ import styles from '../page.module.css';
 import dynamic from "next/dynamic";
 import SummerlinWestOverview from '../../components/ui/SummerlinWestOverview';
 import Head from "next/head";
+import { absoluteUrl } from "../../lib/site-url";
 
 // Dynamic import for client components
 const LatestMarketInsights = dynamic(
@@ -45,7 +46,7 @@ export default function Sold() {
                 name: "Recently Sold Homes in Summerlin",
                 description:
                   "Track the latest sales and market activity in Summerlin West. View recently sold homes, market trends, and expert insights.",
-                url: "https://www.summerlinwestrealestate.com/sold",
+                url: absoluteUrl("/sold"),
               },
               null,
               2,

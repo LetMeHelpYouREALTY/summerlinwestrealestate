@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 import styles from '../../app/page.module.css';
-import { trackGtagEvent } from "../../lib/analytics";
 
 export default function VistasLeadForm() {
   const [name, setName] = useState("");
@@ -42,10 +41,12 @@ export default function VistasLeadForm() {
       }
 
       setSubmitted(true);
-      trackGtagEvent("lead_form_submit", {
-        event_category: "Lead",
-        event_label: "The Vistas",
-      });
+      if (typeof window !== "undefined" && typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
+        (window as unknown as Window & { gtag: (...args: unknown[]) => void }).gtag("event", "lead_form_submit", {
+          event_category: "Lead",
+          event_label: "The Vistas",
+        });
+      }
     } catch (err: unknown) {
       setError(
         "There was a problem submitting your request. Please try again later.",

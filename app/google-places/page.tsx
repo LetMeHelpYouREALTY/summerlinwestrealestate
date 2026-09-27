@@ -5,6 +5,7 @@ import Link from "next/link";
 import styles from '../page.module.css';
 import dynamic from "next/dynamic";
 import SummerlinWestOverview from '../../components/ui/SummerlinWestOverview';
+import { absoluteUrl } from "../../lib/site-url";
 const LatestMarketInsights = dynamic(
   () => import("../../components/ui/LatestMarketInsights"),
   { ssr: false },
@@ -172,7 +173,7 @@ function AddressSearch() {
             "@type": "WebPage",
             "name": "Google Places UI Kit for Real Estate",
             "description": "Comprehensive guide to integrating Google Places API for luxury real estate websites",
-            "url": "https://summerlinwestrealestate.com/google-places"
+            "url": "${absoluteUrl("/google-places")}"
           }
         `}</script>
       </Head>

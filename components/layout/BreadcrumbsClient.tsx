@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { buildBreadcrumbListJsonLd } from "../../lib/breadcrumb-schema";
 
 interface BreadcrumbItem {
   label: string;
@@ -30,17 +31,9 @@ export default function BreadcrumbsClient() {
 
   const breadcrumbs = generateBreadcrumbs();
 
-  // Breadcrumb Schema
-  const breadcrumbSchema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: breadcrumbs.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
-      name: item.label,
-      item: `https://summerlinwestrealestate.com${item.href}`,
-    })),
-  };
+  const breadcrumbSchema = buildBreadcrumbListJsonLd(
+    breadcrumbs.map((item) => ({ name: item.label, path: item.href })),
+  );
 
   if (breadcrumbs.length <= 1) return null;
 

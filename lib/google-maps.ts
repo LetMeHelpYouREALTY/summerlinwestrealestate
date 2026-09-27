@@ -190,13 +190,14 @@ export function createNearbySearchUrl(
 }
 
 // Error handling for API responses
-type GoogleMapsApiStatus = { status?: string };
-
 export function handleGoogleMapsError(response: unknown): void {
   const status =
-    typeof response === "object" && response !== null && "status" in response
-      ? (response as GoogleMapsApiStatus).status
-      : undefined;
+    typeof response === "object" &&
+    response !== null &&
+    "status" in response &&
+    typeof (response as { status: unknown }).status === "string"
+      ? (response as { status: string }).status
+      : "";
 
   if (status === "REQUEST_DENIED") {
     throw new Error(

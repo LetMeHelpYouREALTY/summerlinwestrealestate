@@ -2,9 +2,8 @@
 
 import { useState, useId } from "react";
 import styles from '../../app/page.module.css';
-import { trackGtagEvent } from "../../lib/analytics";
 
-interface VistasListingFormProps {
+export interface VistasListingFormProps {
   formId?: string;
 }
 
@@ -48,10 +47,12 @@ export default function VistasListingForm({ formId }: VistasListingFormProps) {
       }
 
       setSubmitted(true);
-      trackGtagEvent("lead_form_submit", {
-        event_category: "Lead",
-        event_label: "Vistas Listing",
-      });
+      if (typeof window !== "undefined" && typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
+        (window as unknown as Window & { gtag: (...args: unknown[]) => void }).gtag("event", "lead_form_submit", {
+          event_category: "Lead",
+          event_label: "Vistas Listing",
+        });
+      }
     } catch (err: unknown) {
       setError(
         "There was a problem submitting your request. Please try again later.",
