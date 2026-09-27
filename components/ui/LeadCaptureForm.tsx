@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { motion, AnimatePresence } from "framer-motion";
+import { LEAD_SUBMIT_ERROR_MESSAGE } from "../../lib/lead-contact";
 import styles from "./LeadCaptureForm.module.css";
 
 interface LeadFormData {
@@ -86,12 +87,14 @@ export default function LeadCaptureForm({
         body: JSON.stringify({
           ...data,
           page: source,
+          sourceUrl:
+            typeof window !== "undefined" ? window.location.href : undefined,
           timestamp: new Date().toISOString(),
         }),
       });
 
       if (!response.ok) {
-        throw new Error("Failed to submit form");
+        throw new Error(LEAD_SUBMIT_ERROR_MESSAGE);
       }
 
       setSubmitStatus("success");
@@ -128,9 +131,7 @@ export default function LeadCaptureForm({
     } catch (error: unknown) {
       setSubmitStatus("error");
       setErrorMessage(
-        error instanceof Error
-          ? error.message
-          : "There was a problem submitting your request. Please try again.",
+        error instanceof Error ? error.message : LEAD_SUBMIT_ERROR_MESSAGE,
       );
     } finally {
       setIsSubmitting(false);

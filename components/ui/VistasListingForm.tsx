@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useId } from "react";
+import { LEAD_SUBMIT_ERROR_MESSAGE } from "../../lib/lead-contact";
 import styles from '../../app/page.module.css';
 
 export interface VistasListingFormProps {
@@ -39,11 +40,18 @@ export default function VistasListingForm({ formId }: VistasListingFormProps) {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify({ name, email, phone, page: "Vistas Listing" }),
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          page: "Vistas Listing",
+          sourceUrl:
+            typeof window !== "undefined" ? window.location.href : undefined,
+        }),
       });
 
       if (!response.ok) {
-        throw new Error("Failed to submit");
+        throw new Error(LEAD_SUBMIT_ERROR_MESSAGE);
       }
 
       setSubmitted(true);
@@ -55,7 +63,7 @@ export default function VistasListingForm({ formId }: VistasListingFormProps) {
       }
     } catch (err: unknown) {
       setError(
-        "There was a problem submitting your request. Please try again later.",
+        err instanceof Error ? err.message : LEAD_SUBMIT_ERROR_MESSAGE,
       );
     } finally {
       setLoading(false);
