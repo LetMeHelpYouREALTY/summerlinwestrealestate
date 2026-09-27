@@ -415,7 +415,8 @@
   }
 
   .card-elevated {
-    @apply shadow-lg border border-gray-200;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--neutral-200);
   }
 
   .card-hover {
@@ -530,7 +531,8 @@
 
   /* ===== SECTION CARD ENHANCEMENT ===== */
   .sectionCard {
-    @apply card-elevated;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--neutral-200);
     padding: var(--space-8);
     position: relative;
   }
