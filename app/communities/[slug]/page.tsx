@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "../../page.module.css";
 import NeighborhoodHero from "../../../components/ui/NeighborhoodHero";
+import { withCanonical } from "../../../lib/canonical-metadata";
 
 const communities = [
   {
@@ -142,6 +143,7 @@ export async function generateMetadata({ params }: CommunityPageProps) {
     };
   }
   return {
+    ...withCanonical(`/communities/${slug}`),
     title: `${community.name} | Summerlin West Real Estate`,
     description: community.description,
     openGraph: {

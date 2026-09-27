@@ -1,41 +1,41 @@
 "use client";
 import Head from "next/head";
-import styles from './page.module.css';
-import { useLeadCaptureModal } from '../hooks/useLeadCaptureModal';
+import styles from "../page.module.css";
+import { useLeadCaptureModal } from "../../hooks/useLeadCaptureModal";
 import Link from "next/link";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import Header from "../components/layout/Header";
-import SummerlinWestOverview from '../components/ui/SummerlinWestOverview';
-import FeaturedHomeSlider from '../components/ui/FeaturedHomeSlider';
-import { deliveryUrl, siteImages } from "../lib/site-images";
+import Header from "../../components/layout/Header";
+import SummerlinWestOverview from "../../components/ui/SummerlinWestOverview";
+import FeaturedHomeSlider from "../../components/ui/FeaturedHomeSlider";
+import { deliveryUrl, siteImages } from "../../lib/site-images";
 
 // Dynamically import RealScoutAdvancedSearch for performance
 const RealScoutAdvancedSearch = dynamic(
-  () => import("../components/ui/RealScoutAdvancedSearch"),
+  () => import("../../components/ui/RealScoutAdvancedSearch"),
   { ssr: false },
 );
 
 // Dynamically import LeadCaptureForm for performance
 const LeadCaptureForm = dynamic(
-  () => import("../components/ui/LeadCaptureForm"),
+  () => import("../../components/ui/LeadCaptureForm"),
   { ssr: false },
 );
 
 // Dynamically import HomebotWidget for performance
-const HomebotWidget = dynamic(() => import("../components/ui/HomebotWidget"), {
+const HomebotWidget = dynamic(() => import("../../components/ui/HomebotWidget"), {
   ssr: false,
 });
 
 // Dynamically import LatestMarketInsights for performance
 const LatestMarketInsights = dynamic(
-  () => import("../components/ui/LatestMarketInsights"),
+  () => import("../../components/ui/LatestMarketInsights"),
   { ssr: false },
 );
 
 // Dynamically import RealScoutListings for performance
 const RealScoutListings = dynamic(
-  () => import("../components/ui/RealScoutListings"),
+  () => import("../../components/ui/RealScoutListings"),
   { ssr: false },
 );
 
