@@ -128,8 +128,13 @@ const communities = [
   },
 ];
 
-export async function generateMetadata({ params }: unknown) {
-  const community = communities.find((c) => c.slug === params.slug);
+type CommunityPageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({ params }: CommunityPageProps) {
+  const { slug } = await params;
+  const community = communities.find((c) => c.slug === slug);
   if (!community) {
     return {
       title: "Community Not Found | Summerlin West Real Estate",
@@ -146,8 +151,8 @@ export async function generateMetadata({ params }: unknown) {
   };
 }
 
-export default async function Page({ params }: unknown) {
-  const { slug } = params;
+export default async function Page({ params }: CommunityPageProps) {
+  const { slug } = await params;
   const community = communities.find((c) => c.slug === slug);
   if (!community) {
     redirect(

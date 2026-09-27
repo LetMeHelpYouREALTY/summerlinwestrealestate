@@ -7,6 +7,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import SummerlinWestOverview from '../../components/ui/SummerlinWestOverview';
 import LatestMarketInsightsClient from '../../components/ui/LatestMarketInsightsClient';
+import { trackGtagEvent } from "../../lib/analytics";
 
 // Dynamic imports for client components
 const LatestMarketInsights = dynamic(
@@ -57,12 +58,10 @@ export default function TheVistas() {
       }
 
       setSubmitted(true);
-      if (typeof window !== "undefined" && typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
-        (window as Window & { gtag: (...args: unknown[]) => void }).gtag("event", "lead_form_submit", {
-          event_category: "Lead",
-          event_label: "The Vistas",
-        });
-      }
+      trackGtagEvent("lead_form_submit", {
+        event_category: "Lead",
+        event_label: "The Vistas",
+      });
     } catch (err: unknown) {
       setError(
         "There was a problem submitting your request. Please try again later.",

@@ -6,6 +6,17 @@ import Image from "next/image";
 import styles from '../page.module.css';
 import clientStyles from "./client-subdivision.module.css";
 
+interface Subdivision {
+  slug: string;
+  name: string;
+  builder: string;
+  years: string;
+  homeSizes: string;
+  features: string[];
+  type: string;
+  image?: string;
+}
+
 // Enhanced Loading Skeleton
 function LoadingSkeleton() {
   return (
@@ -218,7 +229,7 @@ function SubdivisionImage({
   heroImage,
   imageAlt,
 }: {
-  subdivision: unknown;
+  subdivision: Subdivision;
   heroImage: string;
   imageAlt: string;
 }) {
@@ -339,7 +350,7 @@ function AmenitiesSection() {
 }
 
 // Enhanced CTA with floating action and urgency
-function EnhancedCTA({ subdivision }: { subdivision: unknown }) {
+function EnhancedCTA({ subdivision }: { subdivision: Subdivision }) {
   const [showFloatingCTA, setShowFloatingCTA] = useState(false);
   const { scrollY } = useScroll();
 
@@ -456,18 +467,6 @@ function EnhancedCTA({ subdivision }: { subdivision: unknown }) {
       </motion.div>
     </>
   );
-}
-
-// Add type for subdivision object
-interface Subdivision {
-  slug: string;
-  name: string;
-  builder: string;
-  years: string;
-  homeSizes: string;
-  features: string[];
-  type: string;
-  image?: string;
 }
 
 // Fix implicit any for sub in generateDescription

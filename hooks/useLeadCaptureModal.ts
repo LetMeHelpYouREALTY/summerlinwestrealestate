@@ -4,7 +4,8 @@ import { useState, useCallback } from 'react';
 
 interface LeadCaptureModal {
   isOpen: boolean;
-  openModal: () => void;
+  source: string;
+  openModal: (source?: string) => void;
   closeModal: () => void;
   submitLead: (data: LeadData) => Promise<void>;
 }
@@ -18,8 +19,12 @@ interface LeadData {
 
 export const useLeadCaptureModal = (): LeadCaptureModal => {
   const [isOpen, setIsOpen] = useState(false);
+  const [source, setSource] = useState("");
 
-  const openModal = useCallback(() => {
+  const openModal = useCallback((nextSource?: string) => {
+    if (nextSource) {
+      setSource(nextSource);
+    }
     setIsOpen(true);
   }, []);
 
@@ -47,9 +52,10 @@ export const useLeadCaptureModal = (): LeadCaptureModal => {
 
   return {
     isOpen,
+    source,
     openModal,
     closeModal,
-    submitLead
+    submitLead,
   };
 };
 

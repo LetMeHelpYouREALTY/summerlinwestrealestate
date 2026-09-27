@@ -6,16 +6,13 @@ import LatestMarketInsightsClient from "../../components/ui/LatestMarketInsights
 import dynamic from "next/dynamic";
 import RealScoutAdvancedSearch from "../../components/ui/RealScoutAdvancedSearch";
 import styles from "../page.module.css";
-import { useState } from "react";
-import useExpandable from '../../hooks/useExpandable';
+import FaqAccordionItem from "../../components/market-reports/FaqAccordionItem";
 const LeadCaptureForm = dynamic(
   () => import("../../components/ui/LeadCaptureForm"),
   { ssr: false },
 );
 
 export default function MarketReports() {
-  // FAQ accordion state
-  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
   const faqs = [
     {
       q: "What are the best neighborhoods in Summerlin West?",
@@ -119,27 +116,9 @@ export default function MarketReports() {
       <section className={styles.sectionCard}>
         <h2>Frequently Asked Questions</h2>
         <div className={styles.contentList}>
-          {faqs.map((faq, i) => {
-            const { isExpanded, ariaProps } = useExpandable(false);
-            return (
-              <div key={faq.q} className={styles.faqItem}>
-                <button
-                  {...ariaProps}
-                  aria-controls={`faq-panel-${i}`}
-                  className={styles.faqQuestion}
-                >
-                  {faq.q}
-                </button>
-                <div
-                  id={`faq-panel-${i}`}
-                  hidden={!isExpanded}
-                  className={styles.faqAnswer}
-                >
-                  {faq.a}
-                </div>
-              </div>
-            );
-          })}
+          {faqs.map((faq, i) => (
+            <FaqAccordionItem key={faq.q} faq={faq} index={i} />
+          ))}
         </div>
       </section>
       <section className={styles.sectionCard}>

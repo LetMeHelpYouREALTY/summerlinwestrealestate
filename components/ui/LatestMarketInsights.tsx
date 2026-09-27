@@ -1,31 +1,21 @@
 "use client";
 import React, { useEffect, useState, useMemo } from "react";
-import Parser from "rss-parser";
 import Image from "next/image";
-import styles from '../../app/page.module.css';
+import styles from "../../app/page.module.css";
+import {
+  fetchMarketInsightsRssItems,
+  getImageUrlFromRssItem,
+  type MarketInsightRssItem,
+} from "../../lib/market-insights-feed";
 
-const RSS_FEED_URL =
-  "https://www.simplifyingthemarket.com/en/feed?a=956758-ef2edda2f940e018328655620ea05f18";
-
-// Define specific types for RSS items
-interface RSSItem {
-  title: string;
-  link: string;
-  pubDate?: string;
-  contentSnippet?: string;
-  "media:content"?: { url: string } | { url: string }[];
-  enclosure?: { url: string };
-}
-
-// Cache for RSS data
-let rssCache: { data: RSSItem[] | null; timestamp: number } = {
+let rssCache: { data: MarketInsightRssItem[] | null; timestamp: number } = {
   data: null,
   timestamp: 0,
 };
-const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
+const CACHE_DURATION = 5 * 60 * 1000;
 
 const LatestMarketInsights = React.memo(function LatestMarketInsights() {
-  const [rssItems, setRssItems] = useState<RSSItem[]>([]);
+  const [rssItems, setRssItems] = useState<MarketInsightRssItem[]>([]);
   const [aiImages, setAiImages] = useState<{ [title: string]: string }>({});
 
   useEffect(() => {
@@ -33,35 +23,25 @@ const LatestMarketInsights = React.memo(function LatestMarketInsights() {
       try {
         const now = Date.now();
 
-        // Check cache first
         if (rssCache.data && now - rssCache.timestamp < CACHE_DURATION) {
           setRssItems(rssCache.data);
           return;
         }
 
-        const parser = new Parser({
-          customFields: {
-            item: ["media:content", "enclosure"],
-          },
-        });
-        const feed = await parser.parseURL(RSS_FEED_URL);
-        const items = feed.items.slice(0, 3) as RSSItem[];
-
-        // Update cache
+        const items = (await fetchMarketInsightsRssItems()).slice(0, 3);
         rssCache = { data: items, timestamp: now };
         setRssItems(items);
-      } catch (err) {
-        // fallback: do nothing
+      } catch {
+        // Graceful degradation: section hidden when empty
       }
     }
-    fetchRSS();
+    void fetchRSS();
   }, []);
 
-  // AI image fetch for items with placeholder
   useEffect(() => {
     rssItems.forEach((item) => {
-      const title = item.title;
-      const imageUrl = getImageUrl(item);
+      const title = item.title ?? "";
+      const imageUrl = getImageUrlFromRssItem(item) ?? "/images/og-image.png";
       if (imageUrl.includes("placehold.co") && !aiImages[title]) {
         const prompt = `News headline: ${title}. Real estate, Las Vegas, Summerlin West, modern homes, market insights.`;
         fetch("/api/generate-image", {
@@ -77,31 +57,20 @@ const LatestMarketInsights = React.memo(function LatestMarketInsights() {
                 [title]: `data:image/png;base64,${data.base64}`,
               }));
             }
-          });
+          })
+          .catch(() => undefined);
       }
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rssItems]);
 
   const getImageUrl = useMemo(() => {
-    return (item: RSSItem) => {
-      // Handle media:content as array or object
-      const mediaContent = item["media:content"];
-      if (Array.isArray(mediaContent)) {
-        // Find first with url
-        const found = mediaContent.find((mc) => mc.url);
-        if (found) return found.url;
-      } else if (mediaContent && mediaContent.url) {
-        return mediaContent.url;
+    return (item: MarketInsightRssItem) => {
+      const title = item.title ?? "";
+      if (aiImages[title]) {
+        return aiImages[title];
       }
-      if (item.enclosure && item.enclosure.url) {
-        return item.enclosure.url;
-      }
-      // If AI image exists for this title, use it
-      if (aiImages[item.title]) {
-        return aiImages[item.title];
-      }
-      return "/images/og-image.png";
+      return getImageUrlFromRssItem(item) ?? "/images/og-image.png";
     };
   }, [aiImages]);
 
@@ -112,9 +81,10 @@ const LatestMarketInsights = React.memo(function LatestMarketInsights() {
       <h2 className={styles.centerTitle}>Latest Market Insights</h2>
       <ul className={styles.insightsList}>
         {rssItems.map((item, idx) => {
+          const title = item.title ?? "Market insight";
           const imageUrl = getImageUrl(item);
           return (
-            <li key={idx} className={styles.insightItem}>
+            <li key={item.link ?? idx} className={styles.insightItem}>
               <a
                 href={item.link}
                 target="_blank"
@@ -123,13 +93,13 @@ const LatestMarketInsights = React.memo(function LatestMarketInsights() {
               >
                 <Image
                   src={imageUrl}
-                  alt={item.title}
+                  alt={title}
                   width={120}
                   height={80}
                   className={styles.insightImage}
                 />
                 <div>
-                  <div className={styles.insightTitle}>{item.title}</div>
+                  <div className={styles.insightTitle}>{title}</div>
                   <div className={styles.insightDate}>
                     {item.pubDate &&
                       new Date(item.pubDate).toLocaleDateString()}
