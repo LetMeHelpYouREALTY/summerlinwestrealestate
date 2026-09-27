@@ -7,6 +7,7 @@ import Image from "next/image";
 import dynamic from "next/dynamic";
 import Header from "../components/layout/Header";
 import SummerlinWestOverview from '../components/ui/SummerlinWestOverview';
+import AmenityMapSection from "../components/ui/AmenityMapSection";
 import FeaturedHomeSlider from '../components/ui/FeaturedHomeSlider';
 import { deliveryUrl, siteImages } from "../lib/site-images";
 
@@ -64,7 +65,7 @@ export default function Home() {
   const handleFormSuccess = () => {
     // Track successful submission
     if (typeof window !== "undefined" && typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
-      (window as Window & { gtag: (...args: unknown[]) => void }).gtag("event", "lead_form_success", {
+      (window as Window & { gtag?: (...args: unknown[]) => void }).gtag!("event", "lead_form_success", {
         event_category: "Lead",
         event_label: source,
       });
@@ -228,6 +229,7 @@ export default function Home() {
               <Link href="/about">Learn more about Dr. Duffy &rarr;</Link>
             </p>
           </section>
+          <AmenityMapSection heading="What's Nearby in Summerlin West" />
           {/* Map of Summerlin West Section */}
           <section
             className={styles.section}

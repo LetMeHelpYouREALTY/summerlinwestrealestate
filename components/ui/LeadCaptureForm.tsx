@@ -97,8 +97,8 @@ export default function LeadCaptureForm({
       setSubmitStatus("success");
       reset();
       if (typeof window !== "undefined" && typeof (window as Window & { gtag?: (...args: unknown[]) => void; userType?: string }).gtag === 'function') {
-        const win = window as Window & { gtag: (...args: unknown[]) => void; userType?: string };
-        win.gtag("event", "lead_form_submit", {
+        const win = window as Window & { gtag?: (...args: unknown[]) => void; userType?: string };
+        win.gtag!("event", "lead_form_submit", {
           event_category: "Lead",
           event_label: source,
           cd1: win.userType || "unknown",
@@ -106,7 +106,7 @@ export default function LeadCaptureForm({
           cd3: "submit",
           cd4: 1,
         });
-        win.gtag("event", "generate_lead", {
+        win.gtag!("event", "generate_lead", {
           value: 1,
           currency: "USD",
           form_location: source || "unknown",
@@ -125,8 +125,9 @@ export default function LeadCaptureForm({
     } catch (error: unknown) {
       setSubmitStatus("error");
       setErrorMessage(
-        error.message ||
-          "There was a problem submitting your request. Please try again.",
+        error instanceof Error
+          ? error.message
+          : "There was a problem submitting your request. Please try again.",
       );
     } finally {
       setIsSubmitting(false);
@@ -412,7 +413,7 @@ export default function LeadCaptureForm({
             <div className={styles["form-actions"]}>
               <button
                 type="submit"
-                disabled={isSubmitting || !privacyConsent}
+                disabled={isSubmitting || !_privacyConsent}
                 className={styles["submit-button"]}
               >
                 {isSubmitting ? (

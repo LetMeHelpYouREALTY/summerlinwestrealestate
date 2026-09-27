@@ -12,8 +12,68 @@ interface Property {
   image: string;
 }
 
-const FeaturedHomeSlider: React.FC = () => {
+interface SlideImage {
+  src: string;
+  caption: string;
+}
+
+type FeaturedHomeSliderProps = {
+  images?: SlideImage[];
+};
+
+const FeaturedHomeSlider: React.FC<FeaturedHomeSliderProps> = ({ images }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  if (images?.length) {
+    const nextSlide = () =>
+      setCurrentSlide((prev) => (prev + 1) % images.length);
+    const prevSlide = () =>
+      setCurrentSlide((prev) =>
+        prev === 0 ? images.length - 1 : prev - 1,
+      );
+
+    return (
+      <div className="relative bg-white rounded-lg shadow-lg overflow-hidden">
+        <div className="relative h-80">
+          {images.map((image, index) => (
+            <div
+              key={image.caption}
+              className={`absolute inset-0 transition-opacity duration-500 ${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={image.src}
+                alt={image.caption}
+                className="h-full w-full object-cover"
+                loading="lazy"
+              />
+              <p className="absolute bottom-0 left-0 right-0 bg-black/50 text-white p-3 text-center">
+                {image.caption}
+              </p>
+            </div>
+          ))}
+        </div>
+        <button
+          type="button"
+          onClick={prevSlide}
+          className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
+          aria-label="Previous community photo"
+        >
+          ←
+        </button>
+        <button
+          type="button"
+          onClick={nextSlide}
+          className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 text-white p-2 rounded-full"
+          aria-label="Next community photo"
+        >
+          →
+        </button>
+      </div>
+    );
+  }
 
   // Sample data - replace with your actual property data
   const featuredProperties: Property[] = [

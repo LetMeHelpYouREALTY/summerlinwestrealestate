@@ -3,6 +3,7 @@ import Link from "next/link";
 import styles from '../page.module.css';
 import SummerlinWestOverview from '../../components/ui/SummerlinWestOverview';
 import LatestMarketInsightsClient from '../../components/ui/LatestMarketInsightsClient';
+import AmenityMapSection from "../../components/ui/AmenityMapSection";
 import LeadCaptureFormClient from "../../components/ui/LeadCaptureFormClient";
 
 // Metadata export (replaces Head component)
@@ -63,6 +64,10 @@ export default function DowntownSummerlin() {
         <section className={styles.sectionCard}>
           <LatestMarketInsightsClient />
         </section>
+        <AmenityMapSection
+          heading="What's Near Downtown Summerlin & Summerlin West"
+          intro="Filter restaurants, parks, golf, and everyday services around Summerlin West villages and Downtown Summerlin."
+        />
         <section className={styles.sectionCard}>
           <h2>Shopping in Downtown Summerlin</h2>
           <div className={styles.contentGrid}>

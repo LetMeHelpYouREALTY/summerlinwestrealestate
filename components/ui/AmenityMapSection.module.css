@@ -1,0 +1,40 @@
+.section {
+  padding: 3rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header h2 {
+  font-size: 2rem;
+  color: #0a2540;
+  margin-bottom: 0.75rem;
+}
+
+.header p {
+  color: #374151;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+}
+
+.viewAllLink {
+  color: #3a8dde;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.mapSkeleton {
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  background: #f9fafb;
+  color: #6b7280;
+}
+
+@media (max-width: 640px) {
+  .mapSkeleton {
+    min-height: 320px;
+  }
+}

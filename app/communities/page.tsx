@@ -6,6 +6,7 @@ import styles from "../page.module.css";
 import LatestMarketInsightsClient from "../../components/ui/LatestMarketInsightsClient";
 import RealScoutWidget from "../../components/ui/RealScoutWidget";
 import NeighborhoodHero from "../../components/ui/NeighborhoodHero";
+import AmenityMapSection from "../../components/ui/AmenityMapSection";
 
 export default function Communities() {
   const communities = [
@@ -405,6 +406,7 @@ export default function Communities() {
             </li>
           </ul>
         </section>
+        <AmenityMapSection compact />
       </main>
     </div>
   );

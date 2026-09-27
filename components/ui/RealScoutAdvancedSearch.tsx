@@ -1,10 +1,20 @@
 import React from 'react';
 
-const RealScoutAdvancedSearch: React.FC = () => {
+type RealScoutAdvancedSearchProps = {
+  title?: string;
+  subtitle?: string;
+  variant?: string;
+  showFeatures?: boolean;
+};
+
+const RealScoutAdvancedSearch: React.FC<RealScoutAdvancedSearchProps> = ({
+  title = "Advanced Property Search",
+  subtitle,
+}) => {
   return (
     <div className="real-scout-search">
-      <h2>Advanced Property Search</h2>
-      <p>Search functionality goes here</p>
+      <h2>{title}</h2>
+      {subtitle ? <p>{subtitle}</p> : <p>Search functionality goes here</p>}
     </div>
   );
 };

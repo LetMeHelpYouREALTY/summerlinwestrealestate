@@ -14,10 +14,12 @@ export async function GET(req: NextRequest) {
       ),
     });
   } catch (error: unknown) {
+    const message =
+      error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
       {
         error: "Debug error",
-        message: error.message,
+        message,
       },
       { status: 500 }
     );

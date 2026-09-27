@@ -243,9 +243,13 @@ export function validateImageMetadata(
     "priceRange",
   ];
 
-  return requiredFields.every(
-    (field) => metadata && typeof metadata[field] !== "undefined",
-  );
+  return requiredFields.every((field) => {
+    if (typeof metadata !== "object" || metadata === null) return false;
+    return (
+      field in metadata &&
+      typeof (metadata as Record<string, unknown>)[field] !== "undefined"
+    );
+  });
 }
 
 /**

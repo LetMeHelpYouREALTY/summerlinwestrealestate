@@ -1,0 +1,124 @@
+.page {
+  min-height: 100vh;
+  background: #fff;
+}
+
+.main {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1rem 4rem;
+}
+
+.hero {
+  margin-bottom: 2rem;
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: #0a2540;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.lead {
+  font-size: 1.125rem;
+  color: #374151;
+  line-height: 1.65;
+}
+
+.mapBlock {
+  margin-bottom: 2.5rem;
+}
+
+.contentSection {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.contentSection h2 {
+  font-size: 1.5rem;
+  color: #0a2540;
+  margin-bottom: 0.75rem;
+}
+
+.contentSection p {
+  color: #374151;
+  line-height: 1.65;
+  margin-bottom: 0.75rem;
+}
+
+.faqSection {
+  margin: 2.5rem 0;
+}
+
+.faqSection h2 {
+  font-size: 1.5rem;
+  color: #0a2540;
+  margin-bottom: 1rem;
+}
+
+.faqList {
+  margin: 0;
+}
+
+.faqItem {
+  margin-bottom: 1.25rem;
+}
+
+.faqItem dt {
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 0.35rem;
+}
+
+.faqItem dd {
+  margin: 0;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.trustBlock {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+
+.trustBlock h2 {
+  font-size: 1.375rem;
+  color: #0a2540;
+  margin-bottom: 0.75rem;
+}
+
+.contactList {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.contactList a {
+  color: #3a8dde;
+}
+
+.ctaLink {
+  color: #3a8dde;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.curatedIndex {
+  font-size: 0.9375rem;
+  color: #4b5563;
+}
+
+.curatedIndex ul {
+  padding-left: 1.25rem;
+}
+
+.curatedIndex li {
+  margin-bottom: 0.35rem;
+}
