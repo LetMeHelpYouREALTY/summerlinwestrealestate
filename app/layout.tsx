@@ -2,9 +2,7 @@
 import { Inter, Outfit } from "next/font/google";
 import "./globals.css";
 import { Geist, Geist_Mono } from "next/font/google";
-import Link from "next/link";
 import Script from "next/script";
-import Footer from "../components/layout/Footer";
 import BreadcrumbsClient from "../components/layout/BreadcrumbsClient";
 import Head from "next/head";
 import RealScoutWidget from "../components/ui/RealScoutWidget";
@@ -37,9 +35,12 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://summerlinwestrealestate.com"),
-  title: "Summerlin West Real Estate | The Vistas & Communities",
+  title: {
+    default: "Summerlin West Real Estate | Dr. Jan Duffy",
+    template: "%s | Summerlin West",
+  },
   description:
-    "Market authority for Summerlin West and The Vistas community. Get listings, market reports, and expert guidance.",
+    "Summerlin West real estate with Dr. Jan Duffy, REALTOR®. Explore villages, search MLS listings, and get local guidance across Las Vegas’s west side.",
   keywords: [
     "Summerlin West",
     "Las Vegas real estate",
@@ -61,9 +62,9 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    title: "Summerlin West Real Estate | The Vistas & Communities",
+    title: "Summerlin West Real Estate | Dr. Jan Duffy",
     description:
-      "Market authority for Summerlin West and The Vistas community. Get listings, market reports, and expert guidance.",
+      "Summerlin West real estate with Dr. Jan Duffy, REALTOR®. Explore villages, search MLS listings, and get local guidance across Las Vegas’s west side.",
     url: "https://summerlinwestrealestate.com",
     siteName: "Summerlin West Real Estate",
     images: [
@@ -79,9 +80,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Summerlin West Real Estate | The Vistas & Communities",
+    title: "Summerlin West Real Estate | Dr. Jan Duffy",
     description:
-      "Market authority for Summerlin West and The Vistas community. Get listings, market reports, and expert guidance.",
+      "Summerlin West real estate with Dr. Jan Duffy, REALTOR®. Explore villages, search MLS listings, and get local guidance across Las Vegas’s west side.",
     images: [
       {
         url: "/images/og-image.png",
@@ -250,7 +251,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}
         />
         <Header />
-        <main className="pt-16">{children}</main>
+        <main className="pt-16">
+          <BreadcrumbsClient />
+          {children}
+        </main>
         <div className={styles.sectionCard}>
           <h2 className={styles.centerTitle}>Featured Summerlin Listings</h2>
           <RealScoutWidget priceMin={600000} />

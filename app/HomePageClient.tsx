@@ -1,0 +1,251 @@
+"use client";
+
+import styles from "./page.module.css";
+import { useLeadCaptureModal } from "../hooks/useLeadCaptureModal";
+import Link from "next/link";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+import SummerlinWestOverview from "../components/ui/SummerlinWestOverview";
+import FeaturedHomeSlider from "../components/ui/FeaturedHomeSlider";
+import { deliveryUrl, siteImages } from "../lib/site-images";
+import { trackGtagEvent } from "../lib/analytics";
+import { summerlinWestHomeFaqs } from "../lib/site-faq";
+
+const RealScoutAdvancedSearch = dynamic(
+  () => import("../components/ui/RealScoutAdvancedSearch"),
+  { ssr: false },
+);
+
+const LeadCaptureForm = dynamic(
+  () => import("../components/ui/LeadCaptureForm"),
+  { ssr: false },
+);
+
+const HomebotWidget = dynamic(() => import("../components/ui/HomebotWidget"), {
+  ssr: false,
+});
+
+const LatestMarketInsights = dynamic(
+  () => import("../components/ui/LatestMarketInsights"),
+  { ssr: false },
+);
+
+const RealScoutListings = dynamic(
+  () => import("../components/ui/RealScoutListings"),
+  { ssr: false },
+);
+
+function HomeHeroImage() {
+  const hero = siteImages.heroH1;
+  return (
+    <Image
+      src={deliveryUrl(hero)}
+      alt={hero.alt}
+      width={1200}
+      height={630}
+      className={styles.heroImage}
+      priority
+    />
+  );
+}
+
+export default function HomePageClient() {
+  const { source } = useLeadCaptureModal();
+
+  const handleFormSuccess = () => {
+    trackGtagEvent("lead_form_success", {
+      event_category: "Lead",
+      event_label: source,
+    });
+  };
+
+  const faqs = summerlinWestHomeFaqs;
+
+  return (
+    <main className={styles.main}>
+      <div className={styles.container}>
+        <SummerlinWestOverview />
+        <section className={styles.hero}>
+          <h1 className={styles.heroTitle}>Summerlin West Homes for Sale</h1>
+          <p className={styles.heroSubtitle}>
+            Discover luxury living in Las Vegas&apos; most prestigious
+            master-planned community
+          </p>
+          <HomeHeroImage />
+          <div className={styles.heroStats}>
+            <div className={styles.heroStat}>
+              <span className={styles.heroStatNumber}>$850K</span>
+              <span className={styles.heroStatLabel}>Median Price</span>
+            </div>
+            <div className={styles.heroStat}>
+              <span className={styles.heroStatNumber}>312</span>
+              <span className={styles.heroStatLabel}>Active Listings</span>
+            </div>
+            <div className={styles.heroStat}>
+              <span className={styles.heroStatNumber}>14</span>
+              <span className={styles.heroStatLabel}>Avg Days on Market</span>
+            </div>
+          </div>
+        </section>
+        <section
+          className={styles.section}
+          aria-label="Check the Value of Your Home"
+        >
+          <h2 className={styles.sectionTitle}>Check the Value of Your Home</h2>
+          <p className={styles.heroSubtitle}>
+            Instantly see your home’s estimated value and equity growth in
+            today’s Summerlin West market.
+          </p>
+          <HomebotWidget />
+        </section>
+        <section className={styles.section} aria-label="Hidden Home Equity Tax">
+          <h2 className={styles.sectionTitle}>
+            <span className={styles.equityIcon} aria-hidden="true">💡</span>
+            Are You Facing a Hidden Home Equity Tax?
+          </h2>
+          <p className={styles.heroSubtitle}>
+            Many Summerlin West homeowners could be subject to a significant,
+            often-overlooked tax when selling due to outdated federal laws. Find
+            out if you&apos;re at risk and how to protect your hard-earned
+            equity.
+          </p>
+          <Link href="/hidden-home-equity-tax" className={styles.card}>
+            Learn About the Hidden Home Equity Tax
+          </Link>
+        </section>
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>
+            Featured Neighborhoods in Summerlin West
+          </h2>
+          <FeaturedHomeSlider
+            images={[
+              {
+                src: deliveryUrl(siteImages.theVistas),
+                caption: "The Vistas",
+              },
+              {
+                src: deliveryUrl(siteImages.thePaseos),
+                caption: "The Paseos",
+              },
+              {
+                src: deliveryUrl(siteImages.stonebridge),
+                caption: "Stonebridge",
+              },
+              {
+                src: deliveryUrl(siteImages.redpoint),
+                caption: "Redpoint",
+              },
+              {
+                src: deliveryUrl(siteImages.reverence),
+                caption: "Reverence",
+              },
+              {
+                src: deliveryUrl(siteImages.downtownSummerlin),
+                caption: "Downtown Summerlin",
+              },
+            ]}
+          />
+        </section>
+        <section className={`${styles.section} ${styles.calloutSection}`}>
+          <h2>Meet Your Summerlin West Real Estate Expert</h2>
+          <p>
+            <strong>Dr. Jan Duffy, REALTOR®</strong> has helped families
+            discover luxury living at the gateway to Red Rock Canyon since 2015.
+            As a longtime resident and doctorate-level educator, she brings
+            analytical precision and deep local knowledge to every transaction.
+          </p>
+          <p>
+            Specializing in{" "}
+            <strong>
+              The Ridges, Red Rock Country Club, The Vistas, and The Paseos
+            </strong>
+            , Dr. Duffy is your go-to resource for buying or selling in
+            Summerlin West.
+          </p>
+          <p>
+            <Link href="/about">Learn more about Dr. Duffy &rarr;</Link>
+          </p>
+        </section>
+        <section className={styles.section} aria-label="Map of Summerlin West">
+          <div className={styles.sectionTitle}>Map of Summerlin West</div>
+          <div className={styles.grid}>
+            <div className={styles.mapContainer}>
+              <iframe
+                title="Summerlin West Map"
+                src="https://drjanduffy.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay05NTMy"
+                width="100%"
+                height="450"
+                className={styles.mapIframe}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </section>
+        <section className={styles.section} aria-label="Property Search">
+          <RealScoutAdvancedSearch
+            title="Find Your Dream Home in Summerlin West"
+            subtitle="Search by neighborhood, price, or features. Real-time MLS data."
+            variant="page"
+            showFeatures={true}
+          />
+        </section>
+        <section
+          className={styles.section}
+          aria-label="Featured Summerlin West Homes"
+        >
+          <div className={styles.sectionTitle}>
+            Featured Summerlin West Homes
+          </div>
+          <p className={styles.heroSubtitle}>
+            Browse the latest homes for sale in Summerlin West communities
+          </p>
+          <RealScoutListings />
+        </section>
+        <section className={styles.section} aria-label="Market Overview">
+          <div className={styles.sectionTitle}>
+            Summerlin West Market Overview
+          </div>
+          <div className={styles.grid}>
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>$850K</div>
+              <div className={styles.statLabel}>Median Home Price</div>
+            </div>
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>312</div>
+              <div className={styles.statLabel}>Active Listings</div>
+            </div>
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>14</div>
+              <div className={styles.statLabel}>Avg Days on Market</div>
+            </div>
+            <div className={styles.statCard}>
+              <div className={styles.statNumber}>98%</div>
+              <div className={styles.statLabel}>List-to-Sale Ratio</div>
+            </div>
+          </div>
+        </section>
+        <section className={styles.section} aria-label="Market Insights">
+          <LatestMarketInsights />
+        </section>
+        <section className={styles.section} aria-label="Contact & FAQ">
+          <LeadCaptureForm variant="inline" onSuccess={handleFormSuccess} />
+          <div className={styles.faqSection}>
+            <div className={styles.sectionTitle}>
+              Frequently Asked Questions
+            </div>
+            <ul className={styles.faqList}>
+              {faqs.map((faq) => (
+                <li key={faq.question} className={styles.faqItem}>
+                  <h3 className={styles.faqQuestion}>{faq.question}</h3>
+                  <p className={styles.faqAnswer}>{faq.answer}</p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+      </div>
+    </main>
+  );
+}
