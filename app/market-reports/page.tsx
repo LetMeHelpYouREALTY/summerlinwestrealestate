@@ -13,31 +13,6 @@ const LeadCaptureForm = dynamic(
   { ssr: false },
 );
 
-type FaqItem = { q: string; a: string };
-
-function FaqAccordionItem({ faq, index }: { faq: FaqItem; index: number }) {
-  const { isExpanded, ariaProps } = useExpandable(false);
-
-  return (
-    <div className={styles.faqItem}>
-      <button
-        {...ariaProps}
-        aria-controls={`faq-panel-${index}`}
-        className={styles.faqQuestion}
-      >
-        {faq.q}
-      </button>
-      <div
-        id={`faq-panel-${index}`}
-        hidden={!isExpanded}
-        className={styles.faqAnswer}
-      >
-        {faq.a}
-      </div>
-    </div>
-  );
-}
-
 export default function MarketReports() {
   const faqs = [
     {

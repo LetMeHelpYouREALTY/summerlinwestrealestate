@@ -1,8 +1,6 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { buildBreadcrumbListJsonLd } from "../../lib/breadcrumb-schema";
-
 interface BreadcrumbItem {
   label: string;
   href: string;
@@ -31,18 +29,10 @@ export default function BreadcrumbsClient() {
 
   const breadcrumbs = generateBreadcrumbs();
 
-  const breadcrumbSchema = buildBreadcrumbListJsonLd(
-    breadcrumbs.map((item) => ({ name: item.label, path: item.href })),
-  );
-
   if (breadcrumbs.length <= 1) return null;
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       <nav aria-label="Breadcrumb" className="breadcrumb-nav">
         <ol className="breadcrumb-list">
           {breadcrumbs.map((item, index) => (
