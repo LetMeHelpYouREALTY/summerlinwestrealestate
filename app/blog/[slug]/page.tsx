@@ -1,8 +1,6 @@
 import { notFound } from "next/navigation";
-import { posts } from "../../../lib/posts";
 import BlogLayout from "../../../components/ui/BlogLayout";
-import Image from "next/image";
-import styles from "../../../styles/pages/blog-detail.module.css";
+import { getBlogPostBySlug } from "../../../lib/blog-posts";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -10,7 +8,7 @@ interface PageProps {
 
 export default async function BlogPost({ params }: PageProps) {
   const { slug } = await params;
-  const post = posts.find((p) => p.slug === slug);
+  const post = await getBlogPostBySlug(slug);
 
   if (!post) return notFound();
 

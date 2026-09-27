@@ -190,26 +190,33 @@ export function createNearbySearchUrl(
 }
 
 // Error handling for API responses
+type GoogleMapsApiStatus = { status?: string };
+
 export function handleGoogleMapsError(response: unknown): void {
-  if (response.status === "REQUEST_DENIED") {
+  const status =
+    typeof response === "object" && response !== null && "status" in response
+      ? (response as GoogleMapsApiStatus).status
+      : undefined;
+
+  if (status === "REQUEST_DENIED") {
     throw new Error(
       "Google Maps API request denied. Check your API key and billing status.",
     );
   }
 
-  if (response.status === "OVER_QUERY_LIMIT") {
+  if (status === "OVER_QUERY_LIMIT") {
     throw new Error("Google Maps API quota exceeded. Please try again later.");
   }
 
-  if (response.status === "INVALID_REQUEST") {
+  if (status === "INVALID_REQUEST") {
     throw new Error("Invalid Google Maps API request. Check your parameters.");
   }
 
-  if (response.status === "NOT_FOUND") {
+  if (status === "NOT_FOUND") {
     throw new Error("Google Maps API resource not found.");
   }
 
-  if (response.status === "ZERO_RESULTS") {
+  if (status === "ZERO_RESULTS") {
     throw new Error("No results found for the given parameters.");
   }
 }

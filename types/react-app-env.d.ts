@@ -1,10 +1,29 @@
-declare namespace JSX {
-  interface IntrinsicElements {
-    &apos;realscout-office-listings': React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
-      &apos;agent-encoded-id&apos;?: string;
-      &apos;price-min&apos;?: string | number;
-      &apos;price-max&apos;?: string | number;
-      // Add other attributes as needed
-    };
+import type React from "react";
+
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      "realscout-office-listings": React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement>,
+        HTMLElement
+      > & {
+        "agent-encoded-id"?: string;
+        "sort-order"?: string;
+        "listing-status"?: string;
+        "property-types"?: string;
+        "price-min"?: string | number;
+        "price-max"?: string | number;
+      };
+      "realscout-advanced-search": React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement>,
+        HTMLElement
+      >;
+      "realscout-simple-search": React.DetailedHTMLProps<
+        React.HTMLAttributes<HTMLElement>,
+        HTMLElement
+      >;
+    }
   }
-} 
+}
+
+export {};

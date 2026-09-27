@@ -9,6 +9,7 @@ import Header from "../components/layout/Header";
 import SummerlinWestOverview from '../components/ui/SummerlinWestOverview';
 import FeaturedHomeSlider from '../components/ui/FeaturedHomeSlider';
 import { deliveryUrl, siteImages } from "../lib/site-images";
+import { trackGtagEvent } from "../lib/analytics";
 
 // Dynamically import RealScoutAdvancedSearch for performance
 const RealScoutAdvancedSearch = dynamic(
@@ -63,12 +64,10 @@ export default function Home() {
 
   const handleFormSuccess = () => {
     // Track successful submission
-    if (typeof window !== "undefined" && typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
-      (window as Window & { gtag: (...args: unknown[]) => void }).gtag("event", "lead_form_success", {
-        event_category: "Lead",
-        event_label: source,
-      });
-    }
+    trackGtagEvent("lead_form_success", {
+      event_category: "Lead",
+      event_label: source,
+    });
   };
 
   const faqs: Faq[] = [

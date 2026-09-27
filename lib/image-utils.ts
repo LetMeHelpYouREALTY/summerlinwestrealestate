@@ -243,8 +243,13 @@ export function validateImageMetadata(
     "priceRange",
   ];
 
+  const record =
+    typeof metadata === "object" && metadata !== null
+      ? (metadata as Record<string, unknown>)
+      : null;
+
   return requiredFields.every(
-    (field) => metadata && typeof metadata[field] !== "undefined",
+    (field) => record && typeof record[field] !== "undefined",
   );
 }
 

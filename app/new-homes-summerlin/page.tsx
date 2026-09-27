@@ -3,7 +3,7 @@
 import styles from "./NewHomesSummerlin.module.css";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import SummerlinWestOverview from '../components/ui/SummerlinWestOverview';
+import SummerlinWestOverview from "../../components/ui/SummerlinWestOverview";
 
 // Dynamic imports for client components
 const LatestMarketInsights = dynamic(
