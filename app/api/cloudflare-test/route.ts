@@ -51,10 +51,12 @@ export async function GET(req: NextRequest) {
     });
   } catch (error: unknown) {
     console.error("Cloudflare API Error:", error);
+    const details =
+      error instanceof Error ? error.message : "Unknown error";
     return NextResponse.json(
       {
         error: "Failed to verify Cloudflare token",
-        details: error.message,
+        details,
       },
       { status: 500 }
     );

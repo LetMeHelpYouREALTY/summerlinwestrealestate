@@ -1,9 +1,15 @@
 "use client";
 import dynamic from "next/dynamic";
+import type { ComponentProps } from "react";
+
 const LeadCaptureForm = dynamic(() => import("./LeadCaptureForm"), {
   ssr: false,
 });
 
-export default function LeadCaptureFormClient(props: unknown) {
+type LeadCaptureFormClientProps = ComponentProps<typeof LeadCaptureForm>;
+
+export default function LeadCaptureFormClient(
+  props: LeadCaptureFormClientProps,
+) {
   return <LeadCaptureForm {...props} />;
 }

@@ -3,7 +3,8 @@
 import styles from "./NewHomesSummerlin.module.css";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import SummerlinWestOverview from '../components/ui/SummerlinWestOverview';
+import SummerlinWestOverview from "../../components/ui/SummerlinWestOverview";
+import AmenityMapSection from "../../components/ui/AmenityMapSection";
 
 // Dynamic imports for client components
 const LatestMarketInsights = dynamic(
@@ -62,6 +63,11 @@ export default function NewHomesSummerlin() {
             </div>
           </div>
         </section>
+
+        <AmenityMapSection
+          heading="What's Nearby for New Summerlin West Homeowners"
+          compact
+        />
 
         {/* Builders Section */}
         <section className={styles.buildersSection}>

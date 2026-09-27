@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 import SummerlinWestOverview from '../../components/ui/SummerlinWestOverview';
+import AmenityMapSection from "../../components/ui/AmenityMapSection";
 import LatestMarketInsightsClient from '../../components/ui/LatestMarketInsightsClient';
 
 // Dynamic imports for client components
@@ -58,7 +59,7 @@ export default function TheVistas() {
 
       setSubmitted(true);
       if (typeof window !== "undefined" && typeof (window as Window & { gtag?: (...args: unknown[]) => void }).gtag === 'function') {
-        (window as Window & { gtag: (...args: unknown[]) => void }).gtag("event", "lead_form_submit", {
+        (window as Window & { gtag?: (...args: unknown[]) => void }).gtag!("event", "lead_form_submit", {
           event_category: "Lead",
           event_label: "The Vistas",
         });
@@ -171,6 +172,10 @@ export default function TheVistas() {
             ))}
           </div>
         </section>
+        <AmenityMapSection
+          heading="What's Nearby in The Vistas & Summerlin West"
+          compact
+        />
         <section className={styles.sectionCard}>
           <h2>Explore More</h2>
           <ul className={styles.linkList}>

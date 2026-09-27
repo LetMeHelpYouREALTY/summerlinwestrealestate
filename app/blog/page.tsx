@@ -69,18 +69,37 @@ async function fetchRssPosts() {
   return feed.items || [];
 }
 
+type RssFeedItem = {
+  id?: string;
+  guid?: string;
+  slug?: string;
+  title?: string;
+  excerpt?: string;
+  contentSnippet?: string;
+  content?: string;
+  image?: string;
+  alt?: string;
+  publishedAt?: string;
+  isoDate?: string;
+  author?: string;
+  date?: string;
+  pubDate?: string;
+};
+
 const formatPost = (post: unknown): BlogPost => {
+  const item = post as RssFeedItem;
+  const title = item.title ?? "Untitled";
   return {
-    id: post.id || post.guid || post.slug || post.title,
-    title: post.title,
-    slug: post.slug || post.id || post.guid || "",
-    excerpt: post.excerpt || post.contentSnippet || "",
-    content: post.content || "",
-    image: post.image || "",
-    alt: post.alt || `Image for ${post.title}`,
-    publishedAt: post.publishedAt || post.isoDate || "",
-    author: post.author || "",
-    date: post.date || post.pubDate || "",
+    id: item.id || item.guid || item.slug || title,
+    title,
+    slug: item.slug || item.id || item.guid || "",
+    excerpt: item.excerpt || item.contentSnippet || "",
+    content: item.content || "",
+    image: item.image || "",
+    alt: item.alt || `Image for ${title}`,
+    publishedAt: item.publishedAt || item.isoDate || "",
+    author: item.author || "",
+    date: item.date || item.pubDate || "",
   };
 };
 

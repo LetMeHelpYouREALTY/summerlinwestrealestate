@@ -7,7 +7,6 @@ import dynamic from "next/dynamic";
 import RealScoutAdvancedSearch from "../../components/ui/RealScoutAdvancedSearch";
 import styles from "../page.module.css";
 import { useState } from "react";
-import useExpandable from '../../hooks/useExpandable';
 const LeadCaptureForm = dynamic(
   () => import("../../components/ui/LeadCaptureForm"),
   { ssr: false },
@@ -120,13 +119,15 @@ export default function MarketReports() {
         <h2>Frequently Asked Questions</h2>
         <div className={styles.contentList}>
           {faqs.map((faq, i) => {
-            const { isExpanded, ariaProps } = useExpandable(false);
+            const isExpanded = openFAQ === i;
             return (
               <div key={faq.q} className={styles.faqItem}>
                 <button
-                  {...ariaProps}
+                  type="button"
+                  aria-expanded={isExpanded}
                   aria-controls={`faq-panel-${i}`}
                   className={styles.faqQuestion}
+                  onClick={() => setOpenFAQ(isExpanded ? null : i)}
                 >
                   {faq.q}
                 </button>

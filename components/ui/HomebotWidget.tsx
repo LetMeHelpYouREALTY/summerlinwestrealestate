@@ -3,7 +3,11 @@ import React, { useEffect, useRef, useState, useCallback } from "react";
 // ===== TYPE DEFINITIONS =====
 declare global {
   interface Window {
-    Homebot?: unknown;
+    Homebot?: (
+      selector: string,
+      apiKey: string,
+      options: HomebotOptions,
+    ) => void;
   }
 }
 
@@ -115,7 +119,9 @@ export default function HomebotWidget({
     // Set up timeout
     timeoutRef.current = setTimeout(() => {
       handleError("Script load timeout");
-      retryLoadRef.current && retryLoadRef.current();
+      if (retryLoadRef.current) {
+        retryLoadRef.current();
+      }
     }, SCRIPT_LOAD_TIMEOUT);
 
     // Handle successful load
@@ -132,7 +138,9 @@ export default function HomebotWidget({
     script.onerror = () => {
       clearLoadTimeout();
       handleError("Failed to load Homebot script");
-      retryLoadRef.current && retryLoadRef.current();
+      if (retryLoadRef.current) {
+        retryLoadRef.current();
+      }
     };
 
     // Note: Append to document head instead of shadow DOM
