@@ -289,9 +289,9 @@ function AmenitiesSection() {
       title: "Education Excellence",
       icon: "🎓",
       description:
-        "Top-rated schools: Linda Rankin Givens Elementary, Sig Rogich Middle, Palo Verde High",
+        "Nearby public schools: Linda Rankin Givens Elementary, Sig Rogich Middle, Palo Verde High",
       details:
-        "Award-winning schools with excellent test scores and graduation rates",
+        "Nearby public schools with excellent test scores and graduation rates",
     },
     {
       title: "Security & Access",
@@ -486,7 +486,7 @@ function generateDescription(sub: Subdivision) {
       ? sub.features.join(", ")
       : "premium amenities and exceptional quality";
 
-  return `Discover ${sub.name}, a distinguished ${sub.type.toLowerCase()} neighborhood in The Vistas, ${builderText}${yearsText}. These exceptional homes range from ${sizesText}, featuring ${featuresText}. Experience the pinnacle of Summerlin West luxury living in this exclusive community.`;
+  return `Discover ${sub.name}, a distinguished ${sub.type.toLowerCase()} neighborhood in The Vistas, ${builderText}${yearsText}. These exceptional homes range from ${sizesText}, featuring ${featuresText}. Experience the pinnacle of Summerlin West luxury living in this community.`;
 }
 
 export default function ClientSubdivisionPage({

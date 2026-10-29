@@ -24,7 +24,7 @@ export default function VistasListing() {
 
   const vistaBenefits = [
     "Modern homes with mountain views",
-    "Access to top-rated schools and parks",
+    "Access to public schools and parks",
     "Minutes from Downtown Summerlin",
     "Strong resale value and community amenities",
   ];
