@@ -92,7 +92,7 @@ const subdivisions = [
     builder: "-",
     years: "2002-2004",
     homeSizes: "1,600-2,700 sq ft",
-    features: ["118 Homes", "2-3 Car Garages", "Family-Oriented"],
+    features: ["118 Homes", "2-3 Car Garages"],
     type: "Family",
   },
   {
@@ -108,7 +108,7 @@ const subdivisions = [
     builder: "Pulte Homes",
     years: "2003-2004",
     homeSizes: "1,500-1,900 sq ft",
-    features: ["145 Homes", "Established Neighborhood"],
+    features: ["145 Homes", "Older Neighborhood"],
     type: "Family",
   },
   {
@@ -156,7 +156,7 @@ const subdivisions = [
     builder: "-",
     years: "2004-2005",
     homeSizes: "1,555-1,923 sq ft",
-    features: ["Established Community"],
+    features: ["Mature Landscaping"],
     type: "Family",
   },
   // Additional Subdivisions

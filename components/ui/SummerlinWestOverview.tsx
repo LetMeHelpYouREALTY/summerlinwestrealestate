@@ -15,14 +15,14 @@ const SummerlinWestOverview: React.FC = () => {
           </h3>
           <p className={styles.propertyAddress}>
             Summerlin West represents the newest phase of Las Vegas&apos; premier 
-            master-planned community, offering modern amenities, top-rated schools, 
+            master-planned community, offering modern amenities, nearby public schools, 
             and stunning mountain views.
           </p>
           <ul className={styles.propertyDetails}>
             <li>World-class golf courses</li>
             <li>Downtown Summerlin shopping</li>
             <li>Red Rock Canyon proximity</li>
-            <li>Award-winning schools</li>
+            <li>Nearby public schools</li>
           </ul>
         </div>
         <div>

@@ -33,7 +33,7 @@ export default function MarketReports() {
     },
     {
       q: "What makes Summerlin West special?",
-      a: "Master-planned communities, top-rated schools, Red Rock Canyon access, and a family-friendly lifestyle with excellent amenities.",
+      a: "Master-planned communities, nearby public and private schools, Red Rock Canyon access, and excellent amenities.",
     },
     {
       q: "How can I get a free market report?",

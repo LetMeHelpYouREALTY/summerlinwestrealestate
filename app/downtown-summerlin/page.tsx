@@ -77,7 +77,7 @@ export default function DowntownSummerlin() {
             <p className={styles.contentText}>
               Downtown Summerlin is home to over 125 stores, from luxury
               boutiques to popular national brands. Enjoy open-air shopping,
-              seasonal events, and a vibrant atmosphere perfect for families and
+              seasonal events, and a vibrant atmosphere for residents and
               trendsetters alike. Whether you&apos;re looking for fashion, home
               goods, or unique gifts, you&apos;ll find it all in this premier Las
               Vegas shopping destination.
@@ -90,7 +90,7 @@ export default function DowntownSummerlin() {
             <p className={styles.contentText}>
               Experience a culinary adventure with Downtown Summerlin&apos;s diverse
               dining options. From upscale steakhouses and trendy cafes to
-              family-friendly eateries and quick bites, there&apos;s something for
+              eateries and quick bites, there&apos;s something for
               every palate. Enjoy al fresco dining, happy hours, and chef-driven
               menus in a lively, walkable environment.
             </p>
@@ -138,7 +138,7 @@ export default function DowntownSummerlin() {
                 <li>Median Home Price: $650,000</li>
                 <li>Average Days on Market: 14</li>
                 <li>Walkability Score: 9/10</li>
-                <li>Top-rated schools nearby</li>
+                <li>Public schools nearby</li>
               </ul>
             </div>
             <Image
