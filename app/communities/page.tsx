@@ -392,7 +392,7 @@ export default function Communities() {
               walkable parks.
             </li>
             <li>
-              <strong>Stonebridge:</strong> Family-friendly, close to top-rated
+              <strong>Stonebridge:</strong> Close to top-rated
               schools and Red Rock Canyon.
             </li>
             <li>

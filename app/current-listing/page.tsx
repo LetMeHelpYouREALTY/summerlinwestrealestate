@@ -18,7 +18,7 @@ export default function CurrentListing() {
     "Access to top-rated Summerlin schools",
     "Beautiful parks and walking trails",
     "Minutes from Downtown Summerlin shopping & dining",
-    "Exclusive community events and amenities",
+    "Community events and amenities",
     "Low HOA fees",
   ];
 
