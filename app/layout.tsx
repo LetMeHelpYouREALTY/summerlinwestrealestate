@@ -165,7 +165,7 @@ const schemaMarkup = {
       url: SITE_URL,
       logo: {
         "@type": "ImageObject",
-        url: absoluteUrl("/images/logo.png"),
+        url: absoluteUrl("/images/header/logo.svg"),
       },
       sameAs: [
         "https://www.facebook.com/summerlinwestrealestate",

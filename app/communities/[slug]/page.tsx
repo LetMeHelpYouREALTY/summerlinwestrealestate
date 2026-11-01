@@ -1,4 +1,4 @@
-import { redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "../../page.module.css";
@@ -157,9 +157,7 @@ export default async function Page({ params }: CommunityPageProps) {
   const { slug } = await params;
   const community = communities.find((c) => c.slug === slug);
   if (!community) {
-    redirect(
-      "https://drjanduffy.realscout.com/homesearch/shared-searches/U2hhcmVhYmxlU2VhcmNoTGluay05NTMy",
-    );
+    notFound();
   }
   return (
     <div className={styles.page}>

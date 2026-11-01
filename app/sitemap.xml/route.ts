@@ -27,8 +27,9 @@ export async function GET() {
   ];
 
   // Dynamic subdivision pages
-  const subdivisionPages = subdivisions.map((sub) => ({
-    path: `service-area/${sub.slug}`,
+  const subdivisionSlugs = Array.from(new Set(subdivisions.map((sub) => sub.slug)));
+  const subdivisionPages = subdivisionSlugs.map((slug) => ({
+    path: `service-area/${slug}`,
     priority: "0.6",
     changefreq: "monthly",
   }));

@@ -20,7 +20,6 @@ export default function robots(): MetadataRoute.Robots {
         "/google-places",
         "/service-area/",
       ],
-      disallow: "/market-report",
       crawlDelay: 1,
     },
     sitemap: [
