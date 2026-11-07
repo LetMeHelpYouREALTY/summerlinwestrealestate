@@ -10,6 +10,8 @@ import Head from "next/head";
 import RealScoutWidget from "../components/ui/RealScoutWidget";
 import styles from "./page.module.css";
 import Header from "../components/layout/Header";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+import { SpeedInsights as VercelSpeedInsights } from "@vercel/speed-insights/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -259,6 +261,8 @@ export default function RootLayout({
           <h2 className={styles.centerTitle}>Featured Summerlin Listings</h2>
           <RealScoutWidget priceMin={600000} />
         </div>
+        <VercelAnalytics />
+        <VercelSpeedInsights />
       </body>
     </html>
   );
