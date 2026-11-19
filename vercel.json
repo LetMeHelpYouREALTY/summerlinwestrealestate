@@ -1,13 +1,13 @@
 {
   "redirects": [
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "summerlinwestrealestate.com" }],
       "destination": "https://www.summerlinwesthomes.com/",
       "permanent": true
     },
     {
-      "source": "/:path*",
+      "source": "/(.*)",
       "has": [{ "type": "host", "value": "www.summerlinwestrealestate.com" }],
       "destination": "https://www.summerlinwesthomes.com/",
       "permanent": true
